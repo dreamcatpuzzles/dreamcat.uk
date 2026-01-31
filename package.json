@@ -1,17 +1,17 @@
 {
   "name": "dreamcatuk",
-  "description": "Next.js + Sanity: A Powerful Website Starter with Real-time Visual Editing",
+  "description": "Dreamcat Puzzles website",
   "keywords": [
-    "Sanity",
-    "Next.js",
-    "Headless CMS",
-    "Visual Editing",
+    "performance",
+    "utilisation",
+    "z-index",
+    "zero-downtime",
     "Live Content API (LCAPI)",
-    "Real-time"
+    "editor"
   ],
-  "homepage": "https://github.com/sanity-io/sanity-template-nextjs-clean#readme",
+  "homepage": "https://dreamcat.uk/",
   "bugs": {
-    "url": "https://github.com/sanity-io/sanity-template-nextjs-clean/issues"
+    "url": "https://github.com/dreamcatpuzzles/dreamcat.uk/issues"
   },
   "workspaces": [
     "studio",
