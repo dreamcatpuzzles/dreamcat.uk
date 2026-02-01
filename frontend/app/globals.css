@@ -18,6 +18,10 @@
   padding: 0 2rem;
 }
 
+@utility curtain {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+}
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {

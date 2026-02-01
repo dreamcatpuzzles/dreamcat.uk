@@ -15,11 +15,12 @@ export default {
       colors: {
         black: '#0d0e12',
         white: '#fff',
-        primary: {
-          900: '#37306b',
-        },
-        secondary: {
-          200: '#e4c7cc',
+        primary: '#37306b',
+        secondary: '#66347f',
+        pale: '#e4c7cc',
+        accent: {
+          500: '#bd4e61',
+          700: '#e74968'
         },
         cyan: {
           50: '#e7fefe',

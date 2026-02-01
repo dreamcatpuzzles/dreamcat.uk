@@ -12,7 +12,7 @@
  * ---------------------------------------------------------------------------------
  */
 
-// Source: ../sanity.schema.json
+// Source: ..\sanity.schema.json
 export type PageReference = {
   _ref: string
   _type: 'reference'
@@ -36,19 +36,26 @@ export type Link = {
   openInNewTab?: boolean
 }
 
-export type DreamcatBlock = {
-  _type: 'dreamcatBlock'
-  mode?: 'normal' | 'inverted'
-  pullQuote?: string
-  heading?: string
-  content?: BlockContent
-}
-
 export type SanityImageAssetReference = {
   _ref: string
   _type: 'reference'
   _weak?: boolean
   [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
+}
+
+export type DreamcatBlock = {
+  _type: 'dreamcatBlock'
+  mode?: 'normal' | 'inverted'
+  image?: {
+    asset?: SanityImageAssetReference
+    media?: unknown
+    hotspot?: SanityImageHotspot
+    crop?: SanityImageCrop
+    _type: 'image'
+  }
+  pullQuote?: string
+  heading?: string
+  content?: BlockContent
 }
 
 export type CallToAction = {
@@ -513,8 +520,8 @@ export type AllSanitySchemaTypes =
   | PageReference
   | PostReference
   | Link
-  | DreamcatBlock
   | SanityImageAssetReference
+  | DreamcatBlock
   | CallToAction
   | InfoSection
   | BlockContentTextOnly

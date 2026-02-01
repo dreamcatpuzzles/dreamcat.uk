@@ -1,48 +1,51 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from 'next/image'
+import Link from 'next/link'
+import InlineLink from './InlineLink'
 
 export default function Footer() {
   return (
     <footer className="bg-secondary-200">
       <div className="container relative">
         <div className="flex flex-row items-center pt-12 lg:flex-row gap-6 justify-center text-sm sm:text-base leading-6 tracking-tight">
-          <Link href="https://twitter.com/DreamcatPuzzles" target="_blank" rel="noopener noreferrer">
+          <InlineLink
+            href="https://twitter.com/DreamcatPuzzles"
+            openInNewTab={true}
+          >
             Twitter
-          </Link>
+          </InlineLink>
           |
-          <Link
+          <InlineLink
             href="https://www.instagram.com/dreamcat.puzzles"
-            target="_blank"
-            rel="noopener noreferrer"
+            openInNewTab={true}
           >
             Instagram
-          </Link>
+          </InlineLink>
           |
-          <Link href="https://mastodon.me.uk/@dreamcat" target="_blank" rel="noopener noreferrer">
+          <InlineLink
+            href="https://mastodon.me.uk/@dreamcat"
+            openInNewTab={true}
+          >
             Mastodon
-          </Link>
+          </InlineLink>
           |
-          <Link
+          <InlineLink
             href="https://buttondown.email/DreamcatPuzzles"
-            target="_blank"
-            rel="noopener noreferrer"
+            openInNewTab={true}
           >
             Newsletter
-          </Link>
+          </InlineLink>
         </div>
         <div className="flex justify-center pb-10">
-        <Link
-            href="https://terpeca.com/2025/"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><Image
+          <Link href="https://terpeca.com/2025/" target="_blank" rel="noopener noreferrer">
+            <Image
               src="/images/2025TERPECABadgeNominee.svg"
               alt="2025 TERPECA Award Nominee Badge"
               width={300}
               height={400}
               className="p-4"
-          /></Link>
-          </div>
+            />
+          </Link>
+        </div>
       </div>
     </footer>
   )

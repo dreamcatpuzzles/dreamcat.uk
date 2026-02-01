@@ -21,6 +21,10 @@ export const dreamcatBlock = defineType({
       initialValue: 'normal',
     }),
     defineField({
+      name: 'image',
+      type: 'image',
+    }),
+    defineField({
       name: 'pullQuote',
       title: 'Pull Quote',
       type: 'string',
