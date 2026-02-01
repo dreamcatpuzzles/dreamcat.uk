@@ -12,7 +12,7 @@
  * ---------------------------------------------------------------------------------
  */
 
-// Source: ..\sanity.schema.json
+// Source: ../sanity.schema.json
 export type PageReference = {
   _ref: string
   _type: 'reference'
@@ -38,6 +38,7 @@ export type Link = {
 
 export type DreamcatBlock = {
   _type: 'dreamcatBlock'
+  mode?: 'normal' | 'inverted'
   pullQuote?: string
   heading?: string
   content?: BlockContent

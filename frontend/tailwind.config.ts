@@ -15,6 +15,12 @@ export default {
       colors: {
         black: '#0d0e12',
         white: '#fff',
+        primary: {
+          900: '#37306b',
+        },
+        secondary: {
+          200: '#e4c7cc',
+        },
         cyan: {
           50: '#e7fefe',
           100: '#c5fcfc',

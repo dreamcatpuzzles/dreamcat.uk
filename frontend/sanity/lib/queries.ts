@@ -63,6 +63,15 @@ export const getPageQuery = defineQuery(`
           }
         }
       },
+      _type == "dreamcatBlock" => {
+        content[]{
+          ...,
+          markDefs[]{
+            ...,
+            ${linkReference}
+          }
+        }
+      },
     },
   }
 `)

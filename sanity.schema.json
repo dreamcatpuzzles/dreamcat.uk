@@ -139,6 +139,23 @@
             "value": "dreamcatBlock"
           }
         },
+        "mode": {
+          "type": "objectAttribute",
+          "value": {
+            "type": "union",
+            "of": [
+              {
+                "type": "string",
+                "value": "normal"
+              },
+              {
+                "type": "string",
+                "value": "inverted"
+              }
+            ]
+          },
+          "optional": true
+        },
         "pullQuote": {
           "type": "objectAttribute",
           "value": {

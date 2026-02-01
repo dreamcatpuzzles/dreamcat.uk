@@ -9,6 +9,18 @@ export const dreamcatBlock = defineType({
   // TODO add image field (as background)
   fields: [
     defineField({
+      name: 'mode',
+      title: 'Mode',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Normal', value: 'normal'},
+          {title: 'Inverted', value: 'inverted'},
+        ],
+      },
+      initialValue: 'normal',
+    }),
+    defineField({
       name: 'pullQuote',
       title: 'Pull Quote',
       type: 'string',

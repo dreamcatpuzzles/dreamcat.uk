@@ -13,7 +13,7 @@ type BlockProps = {
 
 export default function DreamcatBlock({block}: BlockProps) {
   return (
-    <div className="container my-12">
+    <div className={`container ${block.mode === 'inverted' ? 'bg-primary-900' : 'bg-secondary-200'}`}>
       <div className="max-w-3xl">
         {block?.pullQuote && (
           <span className="block mt-4 mb-8 text-lg uppercase font-light text-gray-900/70">
