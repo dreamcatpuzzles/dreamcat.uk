@@ -4,6 +4,7 @@ import Cta from '@/app/components/Cta'
 import Info from '@/app/components/InfoSection'
 import {dataAttr} from '@/sanity/lib/utils'
 import {PageBuilderSection} from '@/sanity/lib/types'
+import DreamcatBlock from './DreamcatBlock'
 
 type BlockProps = {
   index: number
@@ -19,6 +20,7 @@ type BlocksType = {
 const Blocks = {
   callToAction: Cta,
   infoSection: Info,
+  dreamcatBlock: DreamcatBlock,
 } as BlocksType
 
 /**

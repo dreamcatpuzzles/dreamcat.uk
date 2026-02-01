@@ -12,7 +12,7 @@
  * ---------------------------------------------------------------------------------
  */
 
-// Source: ../sanity.schema.json
+// Source: ..\sanity.schema.json
 export type PageReference = {
   _ref: string
   _type: 'reference'
@@ -34,6 +34,13 @@ export type Link = {
   page?: PageReference
   post?: PostReference
   openInNewTab?: boolean
+}
+
+export type DreamcatBlock = {
+  _type: 'dreamcatBlock'
+  pullQuote?: string
+  heading?: string
+  content?: BlockContent
 }
 
 export type SanityImageAssetReference = {
@@ -209,6 +216,9 @@ export type Page = {
     | ({
         _key: string
       } & InfoSection)
+    | ({
+        _key: string
+      } & DreamcatBlock)
   >
 }
 
@@ -502,6 +512,7 @@ export type AllSanitySchemaTypes =
   | PageReference
   | PostReference
   | Link
+  | DreamcatBlock
   | SanityImageAssetReference
   | CallToAction
   | InfoSection
