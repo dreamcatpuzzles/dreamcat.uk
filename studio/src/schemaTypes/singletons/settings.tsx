@@ -156,6 +156,121 @@ export const settings = defineType({
         }),
       ],
     }),
+    defineField({
+      name: 'headerLinks',
+      title: 'Header Navigation Links',
+      type: 'array',
+      description: 'Add links to be displayed in the header navigation',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'title',
+              title: 'Link Text',
+              type: 'string',
+              validation: (Rule) => Rule.required(),
+            },
+            {
+              name: 'link',
+              title: 'Link',
+              type: 'object',
+              fields: [
+                {
+                  name: 'linkType',
+                  title: 'Link Type',
+                  type: 'string',
+                  initialValue: 'href',
+                  options: {
+                    list: [
+                      {title: 'URL', value: 'href'},
+                      {title: 'Page', value: 'page'},
+                      {title: 'Post', value: 'post'},
+                    ],
+                    layout: 'radio',
+                  },
+                },
+                {
+                  name: 'href',
+                  title: 'URL',
+                  type: 'url',
+                  hidden: ({parent}) => parent?.linkType !== 'href' && parent?.linkType != null,
+                  validation: (Rule) =>
+                    Rule.custom((value, context) => {
+                      const parent = context.parent?.parent?.parent;
+                      if (parent?.linkType === 'href' && !value) {
+                        return 'URL is required when Link Type is URL';
+                      }
+                      return true;
+                    }),
+                },
+                {
+                  name: 'page',
+                  title: 'Page',
+                  type: 'reference',
+                  to: [{type: 'page'}],
+                  hidden: ({parent}) => parent?.linkType !== 'page',
+                  validation: (Rule) =>
+                    Rule.custom((value, context) => {
+                      const parent = context.parent?.parent?.parent;
+                      if (parent?.linkType === 'page' && !value) {
+                        return 'Page reference is required when Link Type is Page';
+                      }
+                      return true;
+                    }),
+                },
+                {
+                  name: 'post',
+                  title: 'Post',
+                  type: 'reference',
+                  to: [{type: 'post'}],
+                  hidden: ({parent}) => parent?.linkType !== 'post',
+                  validation: (Rule) =>
+                    Rule.custom((value, context) => {
+                      const parent = context.parent?.parent?.parent;
+                      if (parent?.linkType === 'post' && !value) {
+                        return 'Post reference is required when Link Type is Post';
+                      }
+                      return true;
+                    }),
+                },
+                {
+                  name: 'openInNewTab',
+                  title: 'Open in new tab',
+                  type: 'boolean',
+                  initialValue: false,
+                },
+              ],
+            },
+          ],
+          preview: {
+            select: {
+              title: 'title',
+              linkType: 'link.linkType',
+              href: 'link.href',
+              pageTitle: 'link.page.name',
+              postTitle: 'link.post.title',
+              pageSlug: 'link.page.slug.current',
+              postSlug: 'link.post.slug.current'
+            },
+            prepare({title, linkType, href, pageTitle, postTitle, pageSlug, postSlug}) {
+              let subtitle = '';
+              if (linkType === 'href') {
+                subtitle = `URL: ${href}`;
+              } else if (linkType === 'page' && pageTitle) {
+                subtitle = `Page: ${pageTitle}${pageSlug ? ` (/${pageSlug})` : ''}`;
+              } else if (linkType === 'post' && postTitle) {
+                subtitle = `Post: ${postTitle}${postSlug ? ` (${postSlug})` : ''}`;
+              }
+              return {
+                title: title || 'Untitled',
+                subtitle: subtitle || 'No link set',
+              };
+            },
+          },
+        },
+      ],
+    }),
   ],
   preview: {
     prepare() {
