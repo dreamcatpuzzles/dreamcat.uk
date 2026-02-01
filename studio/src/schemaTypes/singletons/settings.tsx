@@ -190,21 +190,21 @@ export const settings = defineType({
                     layout: 'radio',
                   },
                 },
-                {
+                defineField({
                   name: 'href',
                   title: 'URL',
                   type: 'url',
                   hidden: ({parent}) => parent?.linkType !== 'href' && parent?.linkType != null,
                   validation: (Rule) =>
                     Rule.custom((value, context) => {
-                      const parent = context.parent?.parent?.parent;
+                      const parent = context.parent as Link
                       if (parent?.linkType === 'href' && !value) {
-                        return 'URL is required when Link Type is URL';
+                        return 'URL is required when Link Type is URL'
                       }
-                      return true;
+                      return true
                     }),
-                },
-                {
+                }),
+                defineField({
                   name: 'page',
                   title: 'Page',
                   type: 'reference',
@@ -212,14 +212,14 @@ export const settings = defineType({
                   hidden: ({parent}) => parent?.linkType !== 'page',
                   validation: (Rule) =>
                     Rule.custom((value, context) => {
-                      const parent = context.parent?.parent?.parent;
+                      const parent = context.parent as Link
                       if (parent?.linkType === 'page' && !value) {
-                        return 'Page reference is required when Link Type is Page';
+                        return 'Page reference is required when Link Type is Page'
                       }
-                      return true;
+                      return true
                     }),
-                },
-                {
+                }),
+                defineField({
                   name: 'post',
                   title: 'Post',
                   type: 'reference',
@@ -227,13 +227,13 @@ export const settings = defineType({
                   hidden: ({parent}) => parent?.linkType !== 'post',
                   validation: (Rule) =>
                     Rule.custom((value, context) => {
-                      const parent = context.parent?.parent?.parent;
+                      const parent = context.parent as Link
                       if (parent?.linkType === 'post' && !value) {
-                        return 'Post reference is required when Link Type is Post';
+                        return 'Post reference is required when Link Type is Post'
                       }
-                      return true;
+                      return true
                     }),
-                },
+                }),
                 {
                   name: 'openInNewTab',
                   title: 'Open in new tab',
