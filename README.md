@@ -69,6 +69,12 @@ npm run import-sample-data
 
 The schema for the `Post` document type is defined in the `studio/src/schemaTypes/post.ts` file. You can [add more document types](https://www.sanity.io/docs/studio/schema-types) to the schema to suit your needs.
 
+* Update the type code in `studio/src/schemaTypes/[whatever]`
+* Run `npm run generate-types`
+* Update any queries that need e.g. new fields specifying explicitly - `frontend/sanity/lib/queries`
+* You may want to restart the server (but it hot reloaded pretty well for me!)
+* Voila
+
 ### Deploying your application and inviting editors
 
 #### 1. Deploy Sanity Studio

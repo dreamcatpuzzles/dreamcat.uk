@@ -163,6 +163,17 @@ export type Settings = {
     metadataBase?: string
     _type: 'image'
   }
+  headerLinks?: Array<{
+    title: string
+    link?: {
+      linkType?: 'href' | 'page' | 'post'
+      href?: string
+      page?: PageReference
+      post?: PostReference
+      openInNewTab?: boolean
+    }
+    _key: string
+  }>
 }
 
 export type SanityImageCrop = {

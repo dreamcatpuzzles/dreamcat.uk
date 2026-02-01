@@ -1101,6 +1101,96 @@
           }
         },
         "optional": true
+      },
+      "headerLinks": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "array",
+          "of": {
+            "type": "object",
+            "attributes": {
+              "title": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "string"
+                },
+                "optional": false
+              },
+              "link": {
+                "type": "objectAttribute",
+                "value": {
+                  "type": "object",
+                  "attributes": {
+                    "linkType": {
+                      "type": "objectAttribute",
+                      "value": {
+                        "type": "union",
+                        "of": [
+                          {
+                            "type": "string",
+                            "value": "href"
+                          },
+                          {
+                            "type": "string",
+                            "value": "page"
+                          },
+                          {
+                            "type": "string",
+                            "value": "post"
+                          }
+                        ]
+                      },
+                      "optional": true
+                    },
+                    "href": {
+                      "type": "objectAttribute",
+                      "value": {
+                        "type": "string"
+                      },
+                      "optional": true
+                    },
+                    "page": {
+                      "type": "objectAttribute",
+                      "value": {
+                        "type": "inline",
+                        "name": "page.reference"
+                      },
+                      "optional": true
+                    },
+                    "post": {
+                      "type": "objectAttribute",
+                      "value": {
+                        "type": "inline",
+                        "name": "post.reference"
+                      },
+                      "optional": true
+                    },
+                    "openInNewTab": {
+                      "type": "objectAttribute",
+                      "value": {
+                        "type": "boolean"
+                      },
+                      "optional": true
+                    }
+                  }
+                },
+                "optional": true
+              }
+            },
+            "rest": {
+              "type": "object",
+              "attributes": {
+                "_key": {
+                  "type": "objectAttribute",
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "optional": true
       }
     }
   },
