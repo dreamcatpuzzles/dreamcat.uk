@@ -20,6 +20,7 @@
     "@tailwindcss/typography": "^0.5.19",
     "@vercel/speed-insights": "^1.2.0",
     "autoprefixer": "^10.4.22",
+    "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "next": "^16.1.6",
     "next-sanity": "^12.0.5",
@@ -29,6 +30,7 @@
     "sanity": "^5.1.0",
     "sanity-image": "^1.0.0",
     "sonner": "^2.0.7",
+    "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.17"
   },
   "devDependencies": {
