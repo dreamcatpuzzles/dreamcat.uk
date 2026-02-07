@@ -54,8 +54,9 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const baloo = Baloo_2({
   variable: '--font-baloo',
-  subsets: ['latin'],
-  display: 'swap',
+  weight: ['400', '500', '600', '700'],
+  // subsets: ['latin'],
+  // display: 'swap',
 })
 
 const ibmPlexMono = IBM_Plex_Mono({

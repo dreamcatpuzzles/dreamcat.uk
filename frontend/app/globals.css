@@ -30,7 +30,7 @@
   --color-framework: #000;
   --color-black: #0b0b0b;
   --color-white: #fff;
-  --color-brand: #f50;
+  --color-brand: #d27685;
   --color-blue: #0052ff;
   --color-yellow: #cdea19;
   --color-gray-50: #f6f6f8;
@@ -44,6 +44,12 @@
   --color-gray-800: #252837;
   --color-gray-900: #1b1d27;
   --color-gray-950: #13141b;
+  --color-primary: #37306b;
+  --color-secondary: #66347f;
+  --color-pale: #e4c7cc;
+  --color-accent-400: #d27685;
+  --color-accent-500: #bd4e61;
+  --color-accent-700: #e74968;
 
   --default-transition-duration: 250ms;
 }

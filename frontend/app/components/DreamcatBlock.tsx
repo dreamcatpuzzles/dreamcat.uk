@@ -33,7 +33,7 @@ function DivWrapper({
           height={500}
           crop={image.crop}
           mode="cover"
-          className="w-full h-full object-cover mb-8"
+          className="w-full h-full object-cover"
         />
       )
     }
@@ -44,18 +44,18 @@ function DivWrapper({
           alt="Demo image"
           crop={image.crop}
           mode="cover"
-          className="absolute rounded-sm inset-0 w-full h-full object-cover mb-8"
+          className="absolute rounded-sm inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 w-full h-full curtain" />
-        <div className="container relative text-white my-24">{children}</div>
+        <div className="relative text-white py-16">
+          <div className="container">{children}</div>
+        </div>
       </div>
     )
   }
   return (
-    <div
-      className={cn('container my-24', mode === 'inverted' ? 'bg-primary-900' : 'bg-secondary-200')}
-    >
-      {children}
+    <div className={cn('py-16', mode === 'inverted' ? 'bg-secondary text-pale' : 'bg-pale border-b-16 border-accent-400')}>
+      <div className="container">{children}</div>
     </div>
   )
 }
@@ -71,7 +71,11 @@ export default function DreamcatBlock({block}: BlockProps) {
         {block?.pullQuote && (
           <span className="block mt-4 mb-8 italic text-xl">{block.pullQuote}</span>
         )}
-        {block?.heading && <h2 className="text-2xl md:text-3xl lg:text-4xl">{block.heading}</h2>}
+        {block?.heading && (
+          <h2 className="text-2xl md:text-3xl lg:text-4xl pb-4 border-b-4 border-secondary">
+            {block.heading}
+          </h2>
+        )}
         <div className="mt-4">
           {block?.content?.length && (
             <PortableText className="" value={block.content as PortableTextBlock[]} />

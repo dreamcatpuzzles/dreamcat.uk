@@ -1,5 +1,6 @@
 import type {Config} from 'tailwindcss'
 import typography from '@tailwindcss/typography'
+import colors from 'tailwindcss/colors';
 
 export default {
   content: ['./app/**/*.{ts,tsx}', './sanity/**/*.{ts,tsx}'],
@@ -8,6 +9,20 @@ export default {
       center: true,
       padding: '2rem',
     },
+    colors: {
+      primary: '#37306b',
+      secondary: '#66347f',
+      pale: '#e4c7cc',
+      accent: {
+        400: '#d27685',
+        500: '#bd4e61',
+        700: '#e74968',
+      },
+    },
+    fontFamily: {
+      sans: ['var(--font-baloo)'],
+      mono: ['var(--font-ibm-plex-mono)'],
+    },
     extend: {
       boxShadow: {
         layer: '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
@@ -15,13 +30,6 @@ export default {
       colors: {
         black: '#0d0e12',
         white: '#fff',
-        primary: '#37306b',
-        secondary: '#66347f',
-        pale: '#e4c7cc',
-        accent: {
-          500: '#bd4e61',
-          700: '#e74968'
-        },
         cyan: {
           50: '#e7fefe',
           100: '#c5fcfc',
@@ -100,10 +108,6 @@ export default {
           900: '#183122',
           950: '#14211a',
         },
-      },
-      fontFamily: {
-        sans: ['var(--font-baloo)'],
-        mono: ['var(--font-ibm-plex-mono)'],
       },
     },
   },
