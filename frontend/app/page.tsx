@@ -137,52 +137,13 @@ export default async function Page() {
           </div>
         </div>
       </div>
-      <div className="row">
+      <div className="bg-primary">
         <div className="container">
-          <h2 id="collaborations">Our collaborations</h2>
-          <div className="portfolio">
-            <div className="portfolio-item">
-              <Link href="https://www.thekeyofdreams.co.uk" target="_blank" rel="noreferrer">
-                <Image
-                  src="/images/key-of-dreams.jpeg"
-                  alt="Key of Dreams"
-                  width={300}
-                  height={300}
-                />
-                <h3>The Key of Dreams (2024-)</h3>
-              </Link>
-              <span>
-                A theatre experience inspired by classic works of gothic and cosmic horror.
-              </span>
-            </div>
-            <div className="portfolio-item">
-              <Link href="https://locksmithsdream.com" target="_blank" rel="noreferrer">
-                <Image
-                  src="/images/locksmiths-dream.png"
-                  alt="Dreamcatcher"
-                  width={300}
-                  height={300}
-                />
-                <h3>The Locksmith&apos;s Dream (2022-)</h3>
-              </Link>
-              <span>Puzzle design for an immersive theatre experience like no other.</span>
-            </div>
-            <div className="portfolio-item">
-              <Link
-                href="https://audioboom.com/posts/7921770-the-wishing-fish-clock"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Image
-                  src="/images/town-that-knew-too-much.jpg"
-                  alt="Wishing Fish Clock"
-                  width={300}
-                  height={300}
-                />
-                <h3>The Town that Knew Too Much (2021)</h3>
-              </Link>
-              <span>A secret message hidden in a podcast about the 1979 book Masquerade.</span>
-            </div>
+          <h2 id="collaborations" className="text-2xl font-bold text-pale pb-2 border-b-2 border-pale">Our collaborations</h2>
+          <div className="flex flex-row flex-wrap gap-8 py-8 justify-center items-start">
+            <PortfolioCard href="https://www.thekeyofdreams.co.uk" openInNewTab imageSrc="/images/key-of-dreams.jpeg" imageAlt="Key of Dreams" title="The Key of Dreams (2024-)" description="A theatre experience inspired by classic works of gothic and cosmic horror." />
+            <PortfolioCard href="https://locksmithsdream.com" openInNewTab imageSrc="/images/locksmiths-dream.png" imageAlt="The Locksmith's Dream" title="The Locksmith's Dream (2022-)" description="Puzzle design for an immersive theatre experience like no other." />
+            <PortfolioCard href="https://audioboom.com/posts/7921770-the-wishing-fish-clock" openInNewTab imageSrc="/images/town-that-knew-too-much.jpg" imageAlt="Wishing Fish Clock" title="The Town that Knew Too Much (2021)" description="A secret message hidden in a podcast about the 1979 book Masquerade." />
           </div>
         </div>
       </div>
