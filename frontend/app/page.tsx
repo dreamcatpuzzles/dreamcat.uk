@@ -20,14 +20,39 @@ export default async function Page() {
   const {data: settings} = await sanityFetch({
     query: settingsQuery,
   })
+  const prefersReducedMotion =
+    (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
 
   return (
     <>
-      <div className="flex flex-col items-center text-center gap-4 py-4 bg-primary">
-        <Link href="/">
-          <div className="bg-[url(/images/dreamcat.gif)] bg-no-repeat w-[200px] h-[200px] bg-[length:200px_200px]"></div>
-        </Link>
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-pale">Hi! We&apos;re Dreamcat.</h1>
+      <div className="relative h-[56.25vw] overflow-hidden flex flex-col justify-center">
+        <div className="absolute inset-0">
+          {/* <div className="padding-[56.25%_0_0_0] relative w-full h-full"> */}
+          {prefersReducedMotion ? (
+            <div className="bg-primary h-full"></div>
+          ) : (
+            <>
+              <iframe
+                src="https://player.vimeo.com/video/1163082150?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;loop=1"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
+                title="Lucid Labs escape room video"
+              ></iframe>
+              <div className="absolute inset-0 bg-black opacity-50" />
+            </>
+          )}
+          {/* </div> */}
+          {/* <script src="https://player.vimeo.com/api/player.js"></script>{' '} */}
+        </div>
+        <div className="relative z-10 flex flex-col items-center gap-4 py-4">
+          <Link href="/">
+            <div className="bg-[url(/images/dreamcat.gif)] bg-no-repeat w-[200px] h-[200px] bg-[length:200px_200px]"></div>
+          </Link>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-pale">
+            Hi! We&apos;re Dreamcat.
+          </h1>
+        </div>
       </div>
       <div className="bg-pale border-b-accent-400 border-b-12">
         <div className="container py-4 flex flex-row justify-between items-center">
@@ -199,7 +224,10 @@ export default async function Page() {
           </blockquote>
         </div>
       </div>
-      <ImageBanner src="/images/event_crowd.jpg" alt="Crowd of players in the street looking confused" />
+      <ImageBanner
+        src="/images/event_crowd.jpg"
+        alt="Crowd of players in the street looking confused"
+      />
       <div className="bg-primary">
         <div className="container">
           <h2
@@ -300,7 +328,10 @@ export default async function Page() {
             </p>
           </div>
         </div>
-        <ImageBanner src="/images/dreamcatchers.jpg" alt="2 people looking through a giant dreamcatcher" />
+        <ImageBanner
+          src="/images/dreamcatchers.jpg"
+          alt="2 people looking through a giant dreamcatcher"
+        />
       </div>
     </>
   )
