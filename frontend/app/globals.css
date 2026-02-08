@@ -26,6 +26,7 @@
 
 @theme {
   --shadow-layer: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
+  --text-shadow-glow: 0 0 5px;
 
   --color-framework: #000;
   --color-black: #0b0b0b;

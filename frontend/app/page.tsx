@@ -7,6 +7,8 @@ import {settingsQuery} from '@/sanity/lib/queries'
 import {sanityFetch} from '@/sanity/lib/live'
 import Image from 'next/image'
 import {dataAttr} from '@/sanity/lib/utils'
+import PortfolioCard0 from './components/PortfolioCard'
+import PortfolioCard from './components/PortfolioCard'
 
 function ListSeparator() {
   return <span className="px-4">¤</span>
@@ -71,21 +73,26 @@ export default async function Page() {
       </div>
       <div className="bg-primary border-b-12 border-secondary" id="navbar" role="navigation">
         <div className="container">
-            <ul className="p-4 flex flex-row justify-center items-center text-pale">
+          <ul className="p-4 flex flex-row justify-center items-center text-pale">
             <li>
-              <Link href="#portfolio">Our work</Link><ListSeparator />
+              <Link href="#portfolio">Our work</Link>
+              <ListSeparator />
             </li>
             <li>
-              <Link href="/event-hire">Events</Link><ListSeparator />
+              <Link href="/event-hire">Events</Link>
+              <ListSeparator />
             </li>
             <li>
-              <Link href="#commissions">Commissions</Link><ListSeparator />
+              <Link href="#commissions">Commissions</Link>
+              <ListSeparator />
             </li>
             <li>
-              <Link href="#team">Meet the team</Link><ListSeparator />
+              <Link href="#team">Meet the team</Link>
+              <ListSeparator />
             </li>
             <li>
-              <Link href="https://blog.dreamcat.uk">Blog</Link><ListSeparator />
+              <Link href="https://blog.dreamcat.uk">Blog</Link>
+              <ListSeparator />
             </li>
             <li>
               <Link href="#contact">Contact us</Link>
@@ -93,56 +100,40 @@ export default async function Page() {
           </ul>
         </div>
       </div>
-      <div className="row">
+      <div className="bg-primary">
         <div className="container">
-          <h2 id="portfolio">Our games</h2>
-          <div className="portfolio">
-            <div className="portfolio-item portfolio-placeholder"></div>
-            <div className="portfolio-item">
-              <Link href="/lucid-labs">
-                <Image
-                  src="/images/lucid-labs.png"
-                  alt="Lucid Labs logo, concentric multicoloured circles"
-                  width={300}
-                  height={300}
-                />
-                <h3>Lucid Labs (2025)</h3>
-              </Link>
-              <i>
-                &ldquo;Lucidation protocol online. System activates in three... two... one...&rdquo;
-              </i>
-            </div>
-            <div className="portfolio-item portfolio-placeholder"></div>
-            <div className="portfolio-item">
-              <Link href="/wizard-of-os">
-                <Image
-                  src="/images/book.png"
-                  alt="Pixel art book with question mark cover"
-                  width={300}
-                  height={300}
-                />
-                <h3>The Wizard of OS (2024)</h3>
-              </Link>
-              <i>
-                &ldquo;Hello! It looks like you&apos;re trying
-                <br />
-                to solve my murder...&rdquo;
-              </i>
-            </div>
-            <div className="portfolio-item">
-              <Link href="/octonet">
-                <Image src="/images/octonet.jpg" alt="OCTONET" width={300} height={300} />
-                <h3>OCTONET (2022)</h3>
-              </Link>
-              <i>Untangle a corporate conspiracy.</i>
-            </div>
-            <div className="portfolio-item">
-              <Link href="/dreamcatcher">
-                <Image src="/images/dreamcatcher.jpg" alt="Dreamcatcher" width={300} height={300} />
-                <h3>Dreamcatcher (2018)</h3>
-              </Link>
-              <i>The Machine thinks. But it needs dreams.</i>
-            </div>
+          <h2 id="portfolio" className="text-2xl font-bold text-pale pb-2 border-b-2 border-pale">
+            Our games
+          </h2>
+          <div className="flex flex-row flex-wrap gap-8 py-8 justify-center items-start">
+            <PortfolioCard
+              href="/lucid-labs"
+              imageSrc="/images/lucid-labs.png"
+              imageAlt="Lucid Labs logo, concentric multicoloured circles"
+              title="Lucid Labs (2025)"
+              description="Lucidation protocol online. System activates in three... two... one..."
+            />
+            <PortfolioCard
+              href="/wizard-of-os"
+              imageSrc="/images/book.png"
+              imageAlt="Pixel art book with question mark cover"
+              title="The Wizard of OS (2024)"
+              description="Hello! It looks like you're trying to solve my murder..."
+            />
+            <PortfolioCard
+              href="/octonet"
+              imageSrc="/images/octonet.jpg"
+              imageAlt="OCTONET"
+              title="OCTONET (2022)"
+              description="Untangle a corporate conspiracy."
+            />
+            <PortfolioCard
+              href="/dreamcatcher"
+              imageSrc="/images/dreamcatcher.jpg"
+              imageAlt="Dreamcatcher"
+              title="Dreamcatcher (2018)"
+              description="The Machine thinks. But it needs dreams."
+            />
           </div>
         </div>
       </div>
