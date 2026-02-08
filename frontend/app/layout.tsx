@@ -2,7 +2,7 @@ import './globals.css'
 
 import {SpeedInsights} from '@vercel/speed-insights/next'
 import type {Metadata} from 'next'
-import {Baloo_2, IBM_Plex_Mono} from 'next/font/google'
+import {Baloo_2} from 'next/font/google'
 import {draftMode} from 'next/headers'
 import {toPlainText} from 'next-sanity'
 import {VisualEditing} from 'next-sanity/visual-editing'
@@ -55,13 +55,6 @@ export async function generateMetadata(): Promise<Metadata> {
 const baloo = Baloo_2({
   variable: '--font-baloo',
   weight: ['400', '500', '600', '700'],
-  // subsets: ['latin'],
-  // display: 'swap',
-})
-
-const ibmPlexMono = IBM_Plex_Mono({
-  variable: '--font-ibm-plex-mono',
-  weight: ['400'],
   subsets: ['latin'],
   display: 'swap',
 })
@@ -70,7 +63,7 @@ export default async function RootLayout({children}: {children: React.ReactNode}
   const {isEnabled: isDraftMode} = await draftMode()
 
   return (
-    <html lang="en" className={`${baloo.variable} ${ibmPlexMono.variable} bg-white text-black`}>
+    <html lang="en" className={`${baloo.variable} bg-pale text-primary`}>
       <body>
         <section className="min-h-screen pt-24">
           {/* The <Toaster> component is responsible for rendering toast notifications used in /app/client-utils.ts and /app/components/DraftModeToast.tsx */}

@@ -27,7 +27,7 @@ export default async function Page() {
         <Link href="/">
           <div className="bg-[url(/images/dreamcat.gif)] bg-no-repeat w-[200px] h-[200px] bg-[length:200px_200px]"></div>
         </Link>
-        <h1 className="text-4xl font-bold text-pale">Hi! We&apos;re Dreamcat.</h1>
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-pale">Hi! We&apos;re Dreamcat.</h1>
       </div>
       <div className="bg-pale border-b-accent-400 border-b-12">
         <div className="container py-4 flex flex-row justify-between items-center">
@@ -106,7 +106,7 @@ export default async function Page() {
         <div className="container">
           <h2
             id="portfolio"
-            className="text-2xl font-bold text-pale pt-4 pb-2 border-b-2 border-pale"
+            className="text-2xl font-semibold text-pale pt-4 pb-2 border-b-2 border-pale"
           >
             Our games
           </h2>
@@ -146,7 +146,7 @@ export default async function Page() {
         <div className="container">
           <h2
             id="collaborations"
-            className="text-2xl font-bold text-pale pt-4 pb-2 border-b-2 border-pale"
+            className="text-2xl font-semibold text-pale pt-4 pb-2 border-b-2 border-pale"
           >
             Our collaborations
           </h2>
@@ -182,7 +182,7 @@ export default async function Page() {
         <div className="container">
           <h2
             id="events"
-            className="text-2xl font-bold text-primary pt-4 pb-2 border-b-2 border-primary"
+            className="text-2xl font-semibold text-primary pt-4 pb-2 border-b-2 border-primary"
           >
             Events
           </h2>
@@ -204,7 +204,7 @@ export default async function Page() {
         <div className="container">
           <h2
             id="commissions"
-            className="text-2xl font-bold text-pale pt-4 pb-2 border-b-2 border-pale"
+            className="text-2xl font-semibold text-pale pt-4 pb-2 border-b-2 border-pale"
           >
             Commissions and Partnerships
           </h2>
@@ -237,7 +237,7 @@ export default async function Page() {
         <div className="container">
           <h2
             id="team"
-            className="text-2xl font-bold text-primary pt-4 pb-2 border-b-2 border-primary"
+            className="text-2xl font-semibold text-primary pt-4 pb-2 border-b-2 border-primary"
           >
             Meet the team
           </h2>
@@ -289,7 +289,7 @@ export default async function Page() {
           <div className="container">
             <h2
               id="contact"
-              className="text-2xl font-bold text-pale pt-4 pb-2 border-b-2 border-pale"
+              className="text-2xl font-semibold text-pale pt-4 pb-2 border-b-2 border-pale"
             >
               Get in touch
             </h2>
