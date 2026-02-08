@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function DreamcatLink({href, children, openInNewTab}: {href: string; children: React.ReactNode; openInNewTab?: boolean}) {
+export default function InlineLink({href, children, openInNewTab}: {href: string; children: React.ReactNode; openInNewTab?: boolean}) {
   return (
     <Link
       href={href}

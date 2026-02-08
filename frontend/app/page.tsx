@@ -9,6 +9,7 @@ import Image from 'next/image'
 import {dataAttr} from '@/sanity/lib/utils'
 import PortfolioCard0 from './components/PortfolioCard'
 import PortfolioCard from './components/PortfolioCard'
+import InlineLink from './components/InlineLink'
 
 function ListSeparator() {
   return <span className="px-4">¤</span>
@@ -102,7 +103,7 @@ export default async function Page() {
       </div>
       <div className="bg-primary">
         <div className="container">
-          <h2 id="portfolio" className="text-2xl font-bold text-pale pb-2 border-b-2 border-pale">
+          <h2 id="portfolio" className="text-2xl font-bold text-pale pt-4 pb-2 border-b-2 border-pale">
             Our games
           </h2>
           <div className="flex flex-row flex-wrap gap-8 py-8 justify-center items-start">
@@ -139,20 +140,51 @@ export default async function Page() {
       </div>
       <div className="bg-primary">
         <div className="container">
-          <h2 id="collaborations" className="text-2xl font-bold text-pale pb-2 border-b-2 border-pale">Our collaborations</h2>
+          <h2
+            id="collaborations"
+            className="text-2xl font-bold text-pale pt-4 pb-2 border-b-2 border-pale"
+          >
+            Our collaborations
+          </h2>
           <div className="flex flex-row flex-wrap gap-8 py-8 justify-center items-start">
-            <PortfolioCard href="https://www.thekeyofdreams.co.uk" openInNewTab imageSrc="/images/key-of-dreams.jpeg" imageAlt="Key of Dreams" title="The Key of Dreams (2024-)" description="A theatre experience inspired by classic works of gothic and cosmic horror." />
-            <PortfolioCard href="https://locksmithsdream.com" openInNewTab imageSrc="/images/locksmiths-dream.png" imageAlt="The Locksmith's Dream" title="The Locksmith's Dream (2022-)" description="Puzzle design for an immersive theatre experience like no other." />
-            <PortfolioCard href="https://audioboom.com/posts/7921770-the-wishing-fish-clock" openInNewTab imageSrc="/images/town-that-knew-too-much.jpg" imageAlt="Wishing Fish Clock" title="The Town that Knew Too Much (2021)" description="A secret message hidden in a podcast about the 1979 book Masquerade." />
+            <PortfolioCard
+              href="https://www.thekeyofdreams.co.uk"
+              openInNewTab
+              imageSrc="/images/key-of-dreams.jpeg"
+              imageAlt="Key of Dreams"
+              title="The Key of Dreams (2024-)"
+              description="A theatre experience inspired by classic works of gothic and cosmic horror."
+            />
+            <PortfolioCard
+              href="https://locksmithsdream.com"
+              openInNewTab
+              imageSrc="/images/locksmiths-dream.png"
+              imageAlt="The Locksmith's Dream"
+              title="The Locksmith's Dream (2022-)"
+              description="Puzzle design for an immersive theatre experience like no other."
+            />
+            <PortfolioCard
+              href="https://audioboom.com/posts/7921770-the-wishing-fish-clock"
+              openInNewTab
+              imageSrc="/images/town-that-knew-too-much.jpg"
+              imageAlt="Wishing Fish Clock"
+              title="The Town that Knew Too Much (2021)"
+              description="A secret message hidden in a podcast about the 1979 book Masquerade."
+            />
           </div>
         </div>
       </div>
-      <div className="row row-inverted">
+      <div className="bg-pale border-b-12 border-accent-400">
         <div className="container">
-          <h2 id="events">Events</h2>
+          <h2
+            id="events"
+            className="text-2xl font-bold text-primary pt-4 pb-2 border-b-2 border-primary"
+          >
+            Events
+          </h2>
           <p>
             Want your event to be memorable? We&apos;ll run one of our puzzlehunts to fit in with
-            your event. <Link href="event-hire">Find out more!</Link>
+            your event. <Link href="/event-hire">Find out more!</Link>
           </p>
           <blockquote>
             <p>
@@ -162,33 +194,34 @@ export default async function Page() {
             <footer>&mdash; Yee, Risilience (Cambridge)</footer>
           </blockquote>
         </div>
-        <div className="container hero">
-          <Image src="/images/event_crowd.jpg" alt="Event crowd" width={300} height={300} />
-        </div>
+        <div className="container bg-[url(/images/event_crowd.jpg)] bg-cover bg-center rounded-sm h-[300px]"></div>
       </div>
-      <div className="row">
+      <div className="bg-primary">
         <div className="container">
-          <h2 id="commissions">Commissions and Partnerships</h2>
-          <p>
+          <h2 id="commissions" className="text-2xl font-bold text-pale pt-4 pb-2 border-b-2 border-pale">
+            Commissions and Partnerships
+          </h2>
+          <p className="text-pale">
             We don&apos;t just work alone. We&apos;ll work with you to design an experience that
             will knock guests&apos; socks off.
           </p>
-          <p>
+          <p className="text-pale">
             Our approach: understand your audience, figure out what they find fun, do our own
             reading and research, and turn all of that into a series of puzzles that integrate
             seamlessly with the rest of your experience.
           </p>
-          <p>
+          <p className="text-pale">
             Not everybody is an expert at puzzles, so we always tailor experiences to complement the
             rest of the event, and ensure that they are fun for everyone in the audience, regardless
             of age or puzzling experience.
           </p>
-          <p>
+          <p className="text-pale">
             To find out more about our design process, head over to{' '}
-            <Link href="https://blog.dreamcat.uk" target="_blank" rel="noreferrer">
+            <InlineLink href="https://blog.dreamcat.uk" openInNewTab>
               our blog
-            </Link>
-            , and have a look at <Link href="#collaborations">our past collaborations</Link>.
+            </InlineLink>
+            , and have a look at{' '}
+            <InlineLink href="#collaborations">our past collaborations</InlineLink>.
           </p>
         </div>
         <div className="container hero">
