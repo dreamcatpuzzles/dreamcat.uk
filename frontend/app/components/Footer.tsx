@@ -4,7 +4,7 @@ import InlineLink from './InlineLink'
 
 export default function Footer() {
   return (
-    <footer className="bg-secondary-200">
+    <footer className="bg-pale">
       <div className="container relative">
         <div className="flex flex-row items-center pt-12 lg:flex-row gap-6 justify-center text-sm sm:text-base leading-6 tracking-tight">
           <InlineLink

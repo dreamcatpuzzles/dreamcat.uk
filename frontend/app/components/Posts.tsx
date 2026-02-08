@@ -49,8 +49,8 @@ const Posts = ({
   subHeading?: string
 }) => (
   <div>
-    {heading && <h2 className="text-3xl text-gray-900 sm:text-4xl lg:text-5xl">{heading}</h2>}
-    {subHeading && <p className="mt-2 text-lg leading-8 text-gray-600">{subHeading}</p>}
+    {heading && <h2 className="text-2xl font-bold text-accent-700 pt-4 pb-2 border-b-2 border-accent-700">{heading}</h2>}
+    {subHeading && <p className="mt-2 text-lg leading-8">{subHeading}</p>}
     <div className="pt-6 space-y-6">{children}</div>
   </div>
 )
@@ -84,7 +84,7 @@ export const AllPosts = async () => {
   return (
     <Posts
       heading="Recent Posts"
-      subHeading={`${data.length === 1 ? 'This blog post is' : `These ${data.length} blog posts are`} populated from your Sanity Studio.`}
+      subHeading="Thoughts and musings from the world of escape rooms"
     >
       {data.map((post: AllPostsQueryResult[number]) => (
         <Post key={post._id} post={post} />

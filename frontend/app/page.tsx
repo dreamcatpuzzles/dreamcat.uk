@@ -7,9 +7,10 @@ import {settingsQuery} from '@/sanity/lib/queries'
 import {sanityFetch} from '@/sanity/lib/live'
 import Image from 'next/image'
 import {dataAttr} from '@/sanity/lib/utils'
-import PortfolioCard0 from './components/PortfolioCard'
 import PortfolioCard from './components/PortfolioCard'
 import InlineLink from './components/InlineLink'
+import HeadshotCard from './components/HeadshotCard'
+import ImageBanner from './components/ImageBanner'
 
 function ListSeparator() {
   return <span className="px-4">¤</span>
@@ -103,7 +104,10 @@ export default async function Page() {
       </div>
       <div className="bg-primary">
         <div className="container">
-          <h2 id="portfolio" className="text-2xl font-bold text-pale pt-4 pb-2 border-b-2 border-pale">
+          <h2
+            id="portfolio"
+            className="text-2xl font-bold text-pale pt-4 pb-2 border-b-2 border-pale"
+          >
             Our games
           </h2>
           <div className="flex flex-row flex-wrap gap-8 py-8 justify-center items-start">
@@ -194,11 +198,14 @@ export default async function Page() {
             <footer>&mdash; Yee, Risilience (Cambridge)</footer>
           </blockquote>
         </div>
-        <div className="container bg-[url(/images/event_crowd.jpg)] bg-cover bg-center rounded-sm h-[300px]"></div>
       </div>
+      <ImageBanner src="/images/event_crowd.jpg" alt="Crowd of players in the street looking confused" />
       <div className="bg-primary">
         <div className="container">
-          <h2 id="commissions" className="text-2xl font-bold text-pale pt-4 pb-2 border-b-2 border-pale">
+          <h2
+            id="commissions"
+            className="text-2xl font-bold text-pale pt-4 pb-2 border-b-2 border-pale"
+          >
             Commissions and Partnerships
           </h2>
           <p className="text-pale">
@@ -224,113 +231,53 @@ export default async function Page() {
             <InlineLink href="#collaborations">our past collaborations</InlineLink>.
           </p>
         </div>
-        <div className="container hero">
-          <Image src="/images/dinosboard.jpg" alt="Dinosaur board game" width={300} height={300} />
-        </div>
-        <div className="row row-inverted">
-          <div className="container">
-            <h2 id="team">Meet the team</h2>
-            <div className="portfolio">
-              <div className="portfolio-item">
-                <Image
-                  src="/images/sarah.jpg"
-                  alt="Headshot of Sarah Binney"
-                  width={300}
-                  height={300}
-                />
-                <h3>Sarah Binney</h3>
-                <i>Chief Paperclip Duplicator</i>
-                <p>
-                  As a child, Sarah used to spend hours on end watching the clocks in John Lewis
-                  while her mum got the shopping done.
-                </p>
-                <p>
-                  Some time later, having completed her dissertation on the history of horology, she
-                  moved on to electronic tinkering, creative writing and puzzle design.
-                </p>
-                <p>She still thinks clocks are pretty neat, though.</p>
-              </div>
-              <div className="portfolio-item">
-                <Image
-                  src="/images/michael.jpg"
-                  alt="Headshot of Michael Kearns"
-                  width={300}
-                  height={300}
-                />
-                <h3>Michael Kearns</h3>
-                <i>Director of Paperclip Counting</i>
-                <p>
-                  Since a young age Michael has been fascinated by puzzles, scribbling sprawling
-                  mazes on paper (and sometimes the walls).
-                </p>
-                <p>
-                  He has since learnt to code, and keeps himself occupied building experiences —
-                  digital and physical — for people to enjoy.
-                </p>
-              </div>
-              <div className="portfolio-item">
-                <Image
-                  src="/images/catalin.jpg"
-                  alt="Headshot of Catalin Ursachi"
-                  width={300}
-                  height={300}
-                />
-                <h3>Catalin Ursachi</h3>
-                <i>Principal Paperclip De-duplicator</i>
-                <p>
-                  Always fascinated by science, history, logic, and more generally anything which
-                  makes the world tick, Catalin started off with a degree in physics and a
-                  smattering of philosophy.
-                </p>
-                <p>
-                  He then proceeded to channel his curiosity into the more practical pursuits of
-                  software engineering, project management, and puzzle design.
-                </p>
-              </div>
-              <div className="portfolio-item">
-                <Image src="/images/ben.jpg" alt="Headshot of Ben Below" width={300} height={300} />
-                <h3>Ben Below</h3>
-                <i>Head of Multiplayer Solitaire</i>
-              </div>
-              <div className="portfolio-item">
-                <Image
-                  src="/images/harry.jpg"
-                  alt="Headshot of Harry Cummings"
-                  width={300}
-                  height={300}
-                />
-                <h3>Harry Cummings</h3>
-                <i>Non-Denominational Nerd</i>
-              </div>
-              <div className="portfolio-item">
-                <Image
-                  src="/images/wendi.jpg"
-                  alt="Headshot of Wendi Fan"
-                  width={300}
-                  height={300}
-                />
-                <h3>Wendi Fan</h3>
-                <i>Resident Hobby Hoarder & Maker without Borders</i>
-              </div>
-            </div>
-          </div>
-          <div className="container hero">
-            <Image src="/images/event_cafe.jpg" alt="Event cafe" width={300} height={300} />
+        <ImageBanner src="/images/dinosboard.jpg" alt="Dinosaur board game" />
+      </div>
+      <div className="bg-pale">
+        <div className="container">
+          <h2
+            id="team"
+            className="text-2xl font-bold text-primary pt-4 pb-2 border-b-2 border-primary"
+          >
+            Meet the team
+          </h2>
+          <div className="flex flex-row flex-wrap gap-8 py-8 justify-center items-start">
+            <HeadshotCard
+              name="Sarah Binney"
+              role="Chief Paperclip Duplicator"
+              bio="As a child, Sarah used to spend hours on end watching the clocks in John Lewis while her mum got the shopping done. Some time later, having completed her dissertation on the history of horology, she moved on to electronic tinkering, creative writing and puzzle design. She still thinks clocks are pretty neat, though."
+              imageSrc="/images/sarah.jpg"
+            />
+            <HeadshotCard
+              name="Michael Kearns"
+              role="Director of Paperclip Counting"
+              bio="Since a young age Michael has been fascinated by puzzles, scribbling sprawling mazes on paper (and sometimes the walls). He has since learnt to code, and keeps himself occupied building experiences — digital and physical — for people to enjoy."
+              imageSrc="/images/michael.jpg"
+            />
+            <HeadshotCard
+              name="Catalin Ursachi"
+              role="Principal Paperclip De-duplicator"
+              bio="Always fascinated by science, history, logic, and more generally anything which makes the world tick, Catalin started off with a degree in physics and a smattering of philosophy. He then proceeded to channel his curiosity into the more practical pursuits of software engineering, project management, and puzzle design."
+              imageSrc="/images/catalin.jpg"
+            />
+            <HeadshotCard
+              name="Ben Below"
+              role="Head of Multiplayer Solitaire"
+              imageSrc="/images/ben.jpg"
+            />
+            <HeadshotCard
+              name="Harry Cummings"
+              role="Non-Denominational Nerd"
+              imageSrc="/images/harry.jpg"
+            />
+            <HeadshotCard
+              name="Wendi Fan"
+              role="Resident Hobby Hoarder & Maker without Borders"
+              imageSrc="/images/wendi.jpg"
+            />
           </div>
         </div>
-        <div className="row">
-          <div className="container">
-            <h2 id="contact">Get in touch</h2>
-            <p>
-              Interested in what we do? Drop us a line at
-              <Link href="mailto:hi@dreamcat.uk">hi@dreamcat.uk</Link>, we love to talk about
-              puzzles!
-            </p>
-          </div>
-          <div className="container hero">
-            <Image src="/images/dreamcatchers.jpg" alt="Dreamcatchers" width={300} height={300} />
-          </div>
-        </div>
+        <ImageBanner src="/images/event_cafe.jpg" alt="Players solving a puzzle in a cafe" />
         <div className="border-t border-gray-100 bg-gray-50">
           <div className="container">
             <aside className="py-12 sm:py-20">
@@ -338,6 +285,22 @@ export default async function Page() {
             </aside>
           </div>
         </div>
+        <div className="bg-primary py-8">
+          <div className="container">
+            <h2
+              id="contact"
+              className="text-2xl font-bold text-pale pt-4 pb-2 border-b-2 border-pale"
+            >
+              Get in touch
+            </h2>
+            <p className="text-pale">
+              Interested in what we do? Drop us a line at{' '}
+              <InlineLink href="mailto:hi@dreamcat.uk">hi@dreamcat.uk</InlineLink>, we love to talk
+              about puzzles!
+            </p>
+          </div>
+        </div>
+        <ImageBanner src="/images/dreamcatchers.jpg" alt="2 people looking through a giant dreamcatcher" />
       </div>
     </>
   )
