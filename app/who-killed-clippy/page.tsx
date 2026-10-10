@@ -45,60 +45,40 @@ export default function WhoKilledClippyPage() {
                 <blockquote className="twitter-tweet">
                     <p lang="en" dir="ltr">
                         Highlight of
-                        <a
-                            href="https://twitter.com/hashtag/emf2024?src=hash&amp;ref_src=twsrc%5Etfw"
-                        >#emf2024</a
-                        >
+                        <a href="https://twitter.com/hashtag/emf2024?src=hash&amp;ref_src=twsrc%5Etfw">#emf2024</a>
                         was the Clippy&#39;s Murder Puzzle Hunt from
-                        <a
-                            href="https://twitter.com/DreamcatPuzzles?ref_src=twsrc%5Etfw"
-                        >@DreamcatPuzzles</a
-                        >
+                        <a href="https://twitter.com/DreamcatPuzzles?ref_src=twsrc%5Etfw">@DreamcatPuzzles</a>
                         <br /><br />RIP Clippy, gone but not forgotten
                         <a href="https://t.co/JgeUn9lxl6"
-                        >pic.twitter.com/JgeUn9lxl6</a
-                        >
+                        >pic.twitter.com/JgeUn9lxl6</a>
                     </p>
                     &mdash; Alison Clarke (@aaclarke4)
                     <a
                         href="https://twitter.com/aaclarke4/status/1797610280429764831?ref_src=twsrc%5Etfw"
-                    >June 3, 2024</a
-                    >
+                    >June 3, 2024</a>
                 </blockquote>
             </center>
             <script
                 async
                 src="https://platform.twitter.com/widgets.js"
-                charset="utf-8"
+                charSet="utf-8"
             ></script>
             <center>
-                <blockquote class="twitter-tweet" data-dnt="true">
+                <blockquote className="twitter-tweet" data-dnt="true">
                     <p lang="en" dir="ltr">
                         After the high concept, high execution of 2022,
                         wasn&#39;t sure how
-                        <a
-                            href="https://twitter.com/DreamcatPuzzles?ref_src=twsrc%5Etfw"
-                        >@DreamcatPuzzles</a
-                        >
+                        <a href="https://twitter.com/DreamcatPuzzles?ref_src=twsrc%5Etfw"
+                        >@DreamcatPuzzles</a>
                         could follow it up. Life finds a way. Clippy was
                         brilliant. Thank you.
-                        <a
-                            href="https://twitter.com/hashtag/emfcamp2024?src=hash&amp;ref_src=twsrc%5Etfw"
-                        >#emfcamp2024</a
-                        >
-                        <a
-                            href="https://twitter.com/emfcamp?ref_src=twsrc%5Etfw"
-                        >@emfcamp</a
-                        >
+                        <a href="https://twitter.com/hashtag/emfcamp2024?src=hash&amp;ref_src=twsrc%5Etfw">#emfcamp2024</a>
+                        <a href="https://twitter.com/emfcamp?ref_src=twsrc%5Etfw">@emfcamp</a>
                         <a href="https://t.co/enva6SQo3I"
-                        >pic.twitter.com/enva6SQo3I</a
-                        >
+                        >pic.twitter.com/enva6SQo3I</a>
                     </p>
                     &mdash; Toby (@hobytalpert)
-                    <a
-                        href="https://twitter.com/hobytalpert/status/1796966997042827590?ref_src=twsrc%5Etfw"
-                    >June 1, 2024</a
-                    >
+                    <a href="https://twitter.com/hobytalpert/status/1796966997042827590?ref_src=twsrc%5Etfw">June 1, 2024</a>
                 </blockquote>
             </center>
         </Row>

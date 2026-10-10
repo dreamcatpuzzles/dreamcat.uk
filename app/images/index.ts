@@ -22,5 +22,7 @@ import crime_scene from "./crime-scene.jpg";
 import defrag from "./defrag.jpg";
 import paint_toolbar from "./paint-toolbar.jpg";
 import phones from "./phones.jpg";
+import event_cafe from "./event_cafe.jpg";
+import phonebooth from "./phonebooth.jpeg";
 
-export { logo, instagram, mastodon, bluesky, lucid_labs, clippy_book, octonet, dreamcatcher, key_of_dreams, locksmiths_dream, ttktm, event_crowd, dinos, sarah, michael, catalin, benb, harry1, terpeca_2025, reaction, crime_scene, defrag, paint_toolbar, phones }
+export { logo, instagram, mastodon, bluesky, lucid_labs, clippy_book, octonet, dreamcatcher, key_of_dreams, locksmiths_dream, ttktm, event_crowd, dinos, sarah, michael, catalin, benb, harry1, terpeca_2025, reaction, crime_scene, defrag, paint_toolbar, phones, event_cafe, phonebooth }
