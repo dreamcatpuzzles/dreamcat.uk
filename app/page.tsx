@@ -109,5 +109,10 @@ export default function Home() {
         <PersonProfile name="Wai-Wai Ng" />
       </div>
     </Row>
+
+    <Row>
+      <SectionTitle>Get in touch</SectionTitle>
+      <p>Interested in what we do? Drop us a line at <InlineLink href="mailto:hi@dreamcat.uk">hi@dreamcat.uk</InlineLink>, we love to talk about puzzles! </p>
+    </Row>
   </>
 }
