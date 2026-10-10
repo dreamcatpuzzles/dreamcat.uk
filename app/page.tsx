@@ -60,7 +60,7 @@ export default function Home() {
       <SectionTitle id="portfolio">Our games</SectionTitle>
       <div className="flex flex-wrap justify-between">
         <GamePreview href="/lucid-labs" image={lucid_labs} imageAlt="Lucid Labs logo, concentric multicoloured circles" name="Lucid Labs (2025)" description="'Lucidation protocol online. System activates in three... two... one...'" />
-        <GamePreview href="/who-killed-clippy" image={clippy_book} imageAlt="Pixel art book with question mark cover" name="Who Killed Clippy? (2024)" description="Hello! It looks like you're trying to solve my murder..." />
+        <GamePreview href="/who-killed-clippy" image={clippy_book} imageAlt="Pixel art book with question mark cover" name="Who Killed Clippy? (2024)" description="It looks like you're trying to solve my murder. Would you like help?" />
         <GamePreview href="/octonet" image={octonet} imageAlt="Geometric octopus logo with text: OCTONET. The web. Untangled." name="OCTONET (2022)" description="Untangle a corporate conspiracy." />
         <GamePreview href="/dreamcatcher" image={dreamcatcher} imageAlt="Abstract geometric pattern with circles and squares, reminiscent of a circuit board" name="Dreamcatcher (2018)" description="The Machine thinks. But it needs dreams." />
       </div>
@@ -111,7 +111,7 @@ export default function Home() {
     </Row>
 
     <Row>
-      <SectionTitle>Get in touch</SectionTitle>
+      <SectionTitle id="contact">Get in touch</SectionTitle>
       <p>Interested in what we do? Drop us a line at <InlineLink href="mailto:hi@dreamcat.uk">hi@dreamcat.uk</InlineLink>, we love to talk about puzzles! </p>
     </Row>
   </>

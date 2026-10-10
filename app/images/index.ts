@@ -18,5 +18,9 @@ import benb from "./ben.jpg";
 import harry1 from "./harry.jpg";
 import terpeca_2025 from "./2025TERPECABadgeNominee.svg";
 import reaction from "./REAction-2026-Inspirationto-Action.jpg";
+import crime_scene from "./crime-scene.jpg";
+import defrag from "./defrag.jpg";
+import paint_toolbar from "./paint-toolbar.jpg";
+import phones from "./phones.jpg";
 
-export { logo, instagram, mastodon, bluesky, lucid_labs, clippy_book, octonet, dreamcatcher, key_of_dreams, locksmiths_dream, ttktm, event_crowd, dinos, sarah, michael, catalin, benb, harry1, terpeca_2025, reaction }
+export { logo, instagram, mastodon, bluesky, lucid_labs, clippy_book, octonet, dreamcatcher, key_of_dreams, locksmiths_dream, ttktm, event_crowd, dinos, sarah, michael, catalin, benb, harry1, terpeca_2025, reaction, crime_scene, defrag, paint_toolbar, phones }
