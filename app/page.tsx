@@ -1,13 +1,26 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Row from "./Row";
 import Navbar from "./Navbar";
 import Link from "./Link";
 import SectionTitle from "./SectionTitle";
-import { inlineLinkStyles } from "./InlineLink";
+import InlineLink, { inlineLinkStyles } from "./InlineLink";
 import { cn } from "./cn";
+import logo from "./images/logo.png";
+import instagram from "./images/instagram.png";
+import mastodon from "./images/mastodon.png";
+import bluesky from "./images/Bluesky_Logo.svg";
+import lucid_labs from "./images/lucid-labs.png";
+import clippy_book from "./images/clippy-book.png";
+import octonet from "./images/octonet.jpg";
+import dreamcatcher from "./images/dreamcatcher.jpg";
+import key_of_dreams from "./images/key-of-dreams.jpeg";
+import locksmiths_dream from "./images/locksmiths-dream.png";
+import ttktm from "./images/town-that-knew-too-much.jpg";
+import event_crowd from "./images/event_crowd.jpg";
+import dinos from "./images/dinosboard.jpg";
 
 function GamePreview({ href, image, imageAlt, name, description }:
-  { href: string, image: string, imageAlt: string, name: string, description: string }) {
+  { href: string, image: string | StaticImageData, imageAlt: string, name: string, description: string }) {
   return (
     <div className="max-w-[300px]">
       <Link href={href} className="group">
@@ -21,7 +34,7 @@ function GamePreview({ href, image, imageAlt, name, description }:
 
 export default function Home() {
   return <><div className="container text-center flex flex-col items-center">
-    <Image src="logo.png" alt="Sleeping cat logo" unoptimized width={200} height={200} className="mt-4" />
+    <Image src={logo} alt="Sleeping cat logo" unoptimized width={200} height={200} className="mt-4" />
     <h1 className="text-4xl py-4 font-bold">Hi! We're Dreamcat.</h1>
   </div>
     <Row inverted>
@@ -33,11 +46,11 @@ export default function Home() {
           <p>Intrigued? Then we're going to get along very nicely.</p>
         </div>
         <div>
-          <Link href="https://www.instagram.com/dreamcat.puzzles/"><Image unoptimized src="instagram.png" width={45} height={45} alt="Instagram" /></Link>
+          <Link href="https://www.instagram.com/dreamcat.puzzles/"><Image src={instagram} width={45} height={45} alt="Instagram" /></Link>
           <br />
-          <Link href="https://mastodon.me.uk/@dreamcat"><Image unoptimized src="mastodon.png" width={45} height={45} alt="Mastodon" /></Link>
+          <Link href="https://mastodon.me.uk/@dreamcat"><Image src={mastodon} width={45} height={45} alt="Mastodon" /></Link>
           <br />
-          <Link href="https://bsky.app/profile/dreamcatpuzzles.bsky.social"><Image unoptimized src="Bluesky_Logo.svg" width={45} height={45} alt="Bluesky" /></Link>
+          <Link href="https://bsky.app/profile/dreamcatpuzzles.bsky.social"><Image src={bluesky} width={45} height={45} alt="Bluesky" /></Link>
         </div>
       </div>
     </Row>
@@ -47,19 +60,36 @@ export default function Home() {
     <Row>
       <SectionTitle>Our games</SectionTitle>
       <div className="flex flex-wrap justify-between">
-        <GamePreview href="/lucid-labs" image="lucid-labs.png" imageAlt="Lucid Labs logo, concentric multicoloured circles" name="Lucid Labs (2025)" description="'Lucidation protocol online. System activates in three... two... one...'" />
-        <GamePreview href="/who-killed-clippy" image="clippy-book.png" imageAlt="Pixel art book with question mark cover" name="Who Killed Clippy? (2024)" description="Hello! It looks like you're trying to solve my murder..." />
-        <GamePreview href="/octonet" image="octonet.jpg" imageAlt="Geometric octopus logo with text: OCTONET. The web. Untangled." name="OCTONET (2022)" description="Untangle a corporate conspiracy." />
-        <GamePreview href="/dreamcatcher" image="dreamcatcher.jpg" imageAlt="Abstract geometric pattern with circles and squares, reminiscent of a circuit board" name="Dreamcatcher (2018)" description="The Machine thinks. But it needs dreams." />
+        <GamePreview href="/lucid-labs" image={lucid_labs} imageAlt="Lucid Labs logo, concentric multicoloured circles" name="Lucid Labs (2025)" description="'Lucidation protocol online. System activates in three... two... one...'" />
+        <GamePreview href="/who-killed-clippy" image={clippy_book} imageAlt="Pixel art book with question mark cover" name="Who Killed Clippy? (2024)" description="Hello! It looks like you're trying to solve my murder..." />
+        <GamePreview href="/octonet" image={octonet} imageAlt="Geometric octopus logo with text: OCTONET. The web. Untangled." name="OCTONET (2022)" description="Untangle a corporate conspiracy." />
+        <GamePreview href="/dreamcatcher" image={dreamcatcher} imageAlt="Abstract geometric pattern with circles and squares, reminiscent of a circuit board" name="Dreamcatcher (2018)" description="The Machine thinks. But it needs dreams." />
       </div>
 
 
       <SectionTitle>Our collaborations</SectionTitle>
       <div className="flex flex-wrap justify-between">
-        <GamePreview href="https://www.thekeyofdreams.co.uk" image="key-of-dreams.jpeg" imageAlt="Ominous tree lit from behind by warm light" name="The Key of Dreams (2024-)" description="A theatre experience inspired by classic works of gothic and cosmic horror."/>
-        <GamePreview href="https://www.locksmithsdream.com/" image="locksmiths-dream.png" imageAlt="Disorienting view up a square spiral staircase... or is it down?" name="The Locksmith's Dream (2022-23)" description="Puzzle design for an immersive experience like no other."/>
-        <GamePreview href="https://audioboom.com/posts/7921770-the-wishing-fish-clock" image="town-that-knew-too-much.jpg" imageAlt="Man in spy hat and trenchcoat looks furtively through a filing cabinet. On the drawer is a golden hare" name="The Town That Knew Too Much" description="A secret message hidden in a podcast about the 1979 book Masquerade." />
+        <GamePreview href="https://www.thekeyofdreams.co.uk" image={key_of_dreams} imageAlt="Ominous tree lit from behind by warm light" name="The Key of Dreams (2024-)" description="A theatre experience inspired by classic works of gothic and cosmic horror."/>
+        <GamePreview href="https://www.locksmithsdream.com/" image={locksmiths_dream} imageAlt="Disorienting view up a square spiral staircase... or is it down?" name="The Locksmith's Dream (2022-23)" description="Puzzle design for an immersive experience like no other."/>
+        <GamePreview href="https://audioboom.com/posts/7921770-the-wishing-fish-clock" image={ttktm} imageAlt="Man in spy hat and trenchcoat looks furtively through a filing cabinet. On the drawer is a golden hare" name="The Town That Knew Too Much" description="A secret message hidden in a podcast about the 1979 book Masquerade." />
       </div>
+    </Row>
+
+    <Row inverted>
+      <SectionTitle>Events</SectionTitle>
+      <p> We can do one of our games at your wedding, party, corporate event, you name it. <InlineLink href="/events">Find out more!</InlineLink></p>
+      <p>"Everyone had a fantastic time and thoroughly enjoyed themselves. Would highly recommend."</p>
+      <p>— Yee, Risilience (Cambridge)</p>
+      <Image src={event_crowd} alt="A crowd of people looking intently at a puzzle" className="h-[300px] w-full object-cover" />
+    </Row>
+
+    <Row>
+      <SectionTitle>Commissions and Partnerships</SectionTitle>
+      <p>We don't just work alone. We'll work with you to design an experience that will knock guests' socks off.</p>
+      <p>Our approach: understand your audience, figure out what they find fun, do our own reading and research, and turn all of that into a series of puzzles that integrate seamlessly with the rest of your experience.</p>
+      <p>Not everybody is an expert at puzzles, so we always tailor experiences to complement the rest of the event, and ensure that they are fun for everyone in the audience, regardless of age or puzzling experience.</p>
+      <p>To find out more about our design process, head over to <InlineLink href="https://blog.dreamcat.uk/">our blog</InlineLink>.</p>
+      <Image src={dinos} alt="Close up of a game board with hexagonal dinosaur bone pieces" className="h-[300px] w-full object-cover"/>
     </Row>
 
   </>
