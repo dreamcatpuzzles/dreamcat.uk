@@ -9,11 +9,11 @@ export default function NotFound() {
                 <title>404 Not Found</title>
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 {/* <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/> */}
-                <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet" />
+                <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" />
             </head>
 
             <body style={{
-                fontFamily: "'Gamja Flower', cursive",
+                fontFamily: "'Nunito', sans-serif",
                 textAlign: 'center',
                 padding: '2rem',
                 backgroundColor: '#fff2c7',

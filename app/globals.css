@@ -1,52 +1,37 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-gamja-flower);
-  --animate-duck-bob: duck-bob 3s ease-in-out infinite;
-  --animate-marquee: marquee 24s linear infinite;
-  --animate-marquee-reverse: marquee-reverse 32s linear infinite;
-  --animate-icon-snap: icon-snap 1.2s steps(1, end) infinite;
+  --font-sans: var(--font-nunito);
+  --color-midnight: #2c2960;
+  --color-grape: #5b387a;
+  --color-berry: #96398d;
+  --color-salmon: #d178a1;
+  --color-pale: #eddaef;
 }
 
-@keyframes duck-bob {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+:root {
+  --background: var(--color-midnight);
+  --foreground: var(--color-pale);
 }
 
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-@keyframes marquee-reverse {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
-}
-
-@keyframes icon-snap {
-  0%, 49.99% { transform: rotate(-20deg); }
-  50%, 100% { transform: rotate(20deg); }
-}
-
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--color-pale);
+    --foreground: var(--color-midnight);
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-gamja-flower), Arial, Helvetica, sans-serif;
+  font-family: var(--font-nunito), Arial, Helvetica, sans-serif;
   font-size: 20px;
-  background: var(--color-amber-100);
-  color: #220055;
+}
+
+.container {
+    max-width: 950px;
+    margin: 1em auto;
+    padding: 0 2em;
 }
