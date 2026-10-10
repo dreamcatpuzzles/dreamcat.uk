@@ -62,7 +62,7 @@ export default function Home() {
         <GamePreview href="/lucid-labs" image={lucid_labs} imageAlt="Lucid Labs logo, concentric multicoloured circles" name="Lucid Labs (2025)" description="'Lucidation protocol online. System activates in three... two... one...'" />
         <GamePreview href="/who-killed-clippy" image={clippy_book} imageAlt="Pixel art book with question mark cover" name="Who Killed Clippy? (2024)" description="It looks like you're trying to solve my murder. Would you like help?" />
         <GamePreview href="/octonet" image={octonet} imageAlt="Geometric octopus logo with text: OCTONET. The web. Untangled." name="OCTONET (2022)" description="Untangle a corporate conspiracy." />
-        <GamePreview href="/dreamcatcher" image={dreamcatcher} imageAlt="Abstract geometric pattern with circles and squares, reminiscent of a circuit board" name="Dreamcatcher (2018)" description="The Machine thinks. But it needs dreams." />
+        <GamePreview href="https://dreamcatcher-puzzle.gitlab.io/dreamcatcher/" image={dreamcatcher} imageAlt="Abstract geometric pattern with circles and squares, reminiscent of a circuit board" name="Dreamcatcher (2018)" description="The Machine thinks. But it needs dreams." />
       </div>
 
 
