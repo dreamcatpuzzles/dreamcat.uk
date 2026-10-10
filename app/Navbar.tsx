@@ -7,7 +7,7 @@ function NavbarLi({ children }: { children: ReactNode }) {
 
 export default function Navbar() {
     return (
-        <div role="navigation" className="sticky top-0 bg-midnight py-4 border-b-8 border-grape">
+        <div role="navigation" className="sticky top-0 z-1 bg-midnight py-4 border-b-8 border-grape">
             <ul className="text-center">
                 <NavbarLi><Link className="hover:underline" href="/#portfolio">Our work</Link></NavbarLi>
                 <NavbarLi><Link className="hover:underline" href="/event-hire">Events</Link></NavbarLi>

@@ -6,6 +6,7 @@ import Row from "../Row";
 import Link from "../Link";
 import InlineLink from "../InlineLink";
 import SectionTitle from "../SectionTitle";
+import YouTube from "../YoutubeEmbed";
 
 export const metadata: Metadata = {
     title: "Lucid Labs | Dreamcat",
@@ -15,47 +16,24 @@ export const metadata: Metadata = {
 export default function LucidLabsPage() {
     return <>
         <Navbar />
-        <div className="bg-black">
-            <Image src={lucid_labs} alt="Lucid Labs logo, concentric circles" />
-            <h1>Lucid Labs</h1>
-            <p>A Dreamcat experience</p>
+        <div className="bg-black flex flex-col items-center pb-8">
+            <Image src={lucid_labs} alt="Lucid Labs logo, concentric circles" height={300} />
+            <h1 className="font-bold text-5xl pb-4">Lucid Labs</h1>
+            <p className="font-bold text-3xl">A Dreamcat experience</p>
         </div>
         <Row inverted>
-            <p className="font-bold font-xl">Here at Lucid Labs, we believe in the power of dreams. With our very* safe and mostly** tested procedure, you are almost guaranteed to enter into a state of lucid dreaming and explore your own subconscious.</p>
-            <p className="font-bold font-xl">What could go wrong?</p>
-            <Link href="https://terpeca.com/2025/"><Image src={terpeca_2025} alt="Top Escape Rooms Project Enthusiasts' Choice Awards (TERPECA) 2025 Nominee badge" height={300} /></Link>
-            <Link href="https://roomescapeartist.com/2026/01/24/congratulations-2026-reaction-award-winners/"><Image src={reaction} alt="REAction Award for Inspiration to Action from Room Escape Artist" height={300} /></Link>
+            <p className="font-bold font-xl text-center">Here at Lucid Labs, we believe in the power of dreams. With our very* safe and mostly** tested procedure, you are almost guaranteed to enter into a state of lucid dreaming and explore your own subconscious.</p>
+            <p className="font-bold font-xl text-center pb-4">What could go wrong?</p>
+            <div className="flex justify-center">
+                <Link href="https://terpeca.com/2025/"><Image src={terpeca_2025} alt="Top Escape Rooms Project Enthusiasts' Choice Awards (TERPECA) 2025 Nominee badge" height={300} /></Link>
+                <Link href="https://roomescapeartist.com/2026/01/24/congratulations-2026-reaction-award-winners/"><Image src={reaction} alt="REAction Award for Inspiration to Action from Room Escape Artist" height={300} /></Link>
+            </div>
             <p>*T&Cs may vary.</p>
             <p>**In domestic animals.</p>
         </Row>
         <Row>
-            <div style={{ textAlign: "center", maxWidth: 560, margin: "0 auto" }}>
-                <div
-                    style={{
-                        position: "relative",
-                        width: "100%",
-                        paddingBottom: "56.25%",
-                        height: 0,
-                        overflow: "hidden",
-                    }}
-                >
-                    <iframe
-                        style={{
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
-                            width: "100%",
-                            height: "100%",
-                        }}
-                        src="https://www.youtube.com/embed/kzqZlY88Do0?si=T5lCfpEIg8EWVHha"
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerPolicy="strict-origin-when-cross-origin"
-                        allowFullScreen
-                    />
-                </div>
-            </div>
+            <YouTube url="https://www.youtube.com/embed/kzqZlY88Do0?si=T5lCfpEIg8EWVHha"/>
+            <div className="pb-4"/>
             <p>A pop-up immersive puzzle experience run during Summer 2025 in Kentish Town, North London.</p>
         </Row>
         <div className="mb-8 bg-[url(/lucid-labs-wall.jpg)] bg-cover bg-center">
