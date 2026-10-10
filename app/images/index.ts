@@ -17,5 +17,6 @@ import catalin from "./catalin.jpg";
 import benb from "./ben.jpg";
 import harry1 from "./harry.jpg";
 import terpeca_2025 from "./2025TERPECABadgeNominee.svg";
+import reaction from "./REAction-2026-Inspirationto-Action.jpg";
 
-export { logo, instagram, mastodon, bluesky, lucid_labs, clippy_book, octonet, dreamcatcher, key_of_dreams, locksmiths_dream, ttktm, event_crowd, dinos, sarah, michael, catalin, benb, harry1, terpeca_2025 }
+export { logo, instagram, mastodon, bluesky, lucid_labs, clippy_book, octonet, dreamcatcher, key_of_dreams, locksmiths_dream, ttktm, event_crowd, dinos, sarah, michael, catalin, benb, harry1, terpeca_2025, reaction }
