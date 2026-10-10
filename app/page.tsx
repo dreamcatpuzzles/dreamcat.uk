@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Row from "./Row";
-import Link from "next/link";
 import Navbar from "./Navbar";
+import Link from "./Link";
 import SectionTitle from "./SectionTitle";
 import { inlineLinkStyles } from "./InlineLink";
 import { cn } from "./cn";
@@ -33,11 +33,11 @@ export default function Home() {
           <p>Intrigued? Then we're going to get along very nicely.</p>
         </div>
         <div>
-          <Link href="/"><Image unoptimized src="instagram.png" width={45} height={45} alt="Instagram" /></Link>
+          <Link href="https://www.instagram.com/dreamcat.puzzles/"><Image unoptimized src="instagram.png" width={45} height={45} alt="Instagram" /></Link>
           <br />
-          <Link href="/"><Image unoptimized src="mastodon.png" width={45} height={45} alt="Mastodon" /></Link>
+          <Link href="https://mastodon.me.uk/@dreamcat"><Image unoptimized src="mastodon.png" width={45} height={45} alt="Mastodon" /></Link>
           <br />
-          <Link href="/"><Image unoptimized src="Bluesky_Logo.svg" width={45} height={45} alt="Bluesky" /></Link>
+          <Link href="https://bsky.app/profile/dreamcatpuzzles.bsky.social"><Image unoptimized src="Bluesky_Logo.svg" width={45} height={45} alt="Bluesky" /></Link>
         </div>
       </div>
     </Row>
