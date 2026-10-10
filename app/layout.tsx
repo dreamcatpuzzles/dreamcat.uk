@@ -1,31 +1,26 @@
 import type { Metadata } from "next";
-import { Gamja_Flower } from "next/font/google";
-import AppQueryProvider from "@/app/QueryProvider";
-import GameOverRedirect from "@/app/GameOverRedirect";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 
-const gamjaFlower = Gamja_Flower({
-  variable: "--font-gamja-flower",
+const nunito = Nunito({
+  variable: "--font-nunito",
   subsets: ["latin"],
   weight: "400"
 });
 
 export const metadata: Metadata = {
-  title: "Special Ducklivery",
-  description: "A game about bad art, and ducks",
+  title: "Dreamcat: Home",
+  description: "We make cool stuff. Nice of you to visit!",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${gamjaFlower.variable} h-full antialiased`}
+      className={`${nunito.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <AppQueryProvider>
-          <GameOverRedirect />
-          {children}
-        </AppQueryProvider>
+        {children}
       </body>
     </html>
   );
