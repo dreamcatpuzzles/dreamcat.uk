@@ -1,12 +1,12 @@
+import { lucid_labs, reaction, terpeca_2025 } from "@/app/images";
+import InlineLink from "@/app/InlineLink";
+import Link from "@/app/Link";
+import Navbar from "@/app/Navbar";
+import Row from "@/app/Row";
+import SectionTitle from "@/app/SectionTitle";
+import YouTube from "@/app/YoutubeEmbed";
 import { Metadata } from "next";
-import Navbar from "../Navbar";
 import Image from "next/image";
-import { lucid_labs, reaction, terpeca_2025 } from "../images";
-import Row from "../Row";
-import Link from "../Link";
-import InlineLink from "../InlineLink";
-import SectionTitle from "../SectionTitle";
-import YouTube from "../YoutubeEmbed";
 
 export const metadata: Metadata = {
     title: "Lucid Labs | Dreamcat",

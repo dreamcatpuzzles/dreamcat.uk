@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import { dinos, event_cafe, octonet, phonebooth } from "../images";
-import InlineLink from "../InlineLink";
-import Navbar from "../Navbar";
-import Row from "../Row";
-import SectionTitle from "../SectionTitle";
+import { dinos, event_cafe, octonet, phonebooth } from "@/app/images";
+import InlineLink from "@/app/InlineLink";
+import Navbar from "@/app/Navbar";
+import Row from "@/app/Row";
+import SectionTitle from "@/app/SectionTitle";
 
 export const metadata: Metadata = {
     title: "OCTONET | Dreamcat",

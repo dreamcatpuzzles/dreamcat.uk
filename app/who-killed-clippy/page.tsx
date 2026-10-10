@@ -1,10 +1,10 @@
+import { crime_scene, defrag, logo, paint_toolbar, phones } from "@/app/images";
+import InlineLink from "@/app/InlineLink";
+import Navbar from "@/app/Navbar";
+import Row from "@/app/Row";
+import SectionTitle from "@/app/SectionTitle";
 import { Metadata } from "next";
-import Row from "../Row";
 import Image from "next/image";
-import { crime_scene, defrag, logo, paint_toolbar, phones } from "../images";
-import Navbar from "../Navbar";
-import InlineLink from "../InlineLink";
-import SectionTitle from "../SectionTitle";
 
 export const metadata: Metadata = {
     title: "Who Killed Clippy? | Dreamcat",
