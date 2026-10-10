@@ -57,7 +57,7 @@ export default function Home() {
     <Navbar />
 
     <Row>
-      <SectionTitle>Our games</SectionTitle>
+      <SectionTitle id="portfolio">Our games</SectionTitle>
       <div className="flex flex-wrap justify-between">
         <GamePreview href="/lucid-labs" image={lucid_labs} imageAlt="Lucid Labs logo, concentric multicoloured circles" name="Lucid Labs (2025)" description="'Lucidation protocol online. System activates in three... two... one...'" />
         <GamePreview href="/who-killed-clippy" image={clippy_book} imageAlt="Pixel art book with question mark cover" name="Who Killed Clippy? (2024)" description="Hello! It looks like you're trying to solve my murder..." />
@@ -66,7 +66,7 @@ export default function Home() {
       </div>
 
 
-      <SectionTitle>Our collaborations</SectionTitle>
+      <SectionTitle id="commissions">Our collaborations</SectionTitle>
       <div className="flex flex-wrap justify-between">
         <GamePreview href="https://www.thekeyofdreams.co.uk" image={key_of_dreams} imageAlt="Ominous tree lit from behind by warm light" name="The Key of Dreams (2024-)" description="A theatre experience inspired by classic works of gothic and cosmic horror." />
         <GamePreview href="https://www.locksmithsdream.com/" image={locksmiths_dream} imageAlt="Disorienting view up a square spiral staircase... or is it down?" name="The Locksmith's Dream (2022-23)" description="Puzzle design for an immersive experience like no other." />
@@ -92,7 +92,7 @@ export default function Home() {
     </Row>
 
     <Row inverted>
-      <SectionTitle>Meet the team</SectionTitle>
+      <SectionTitle id="team">Meet the team</SectionTitle>
       <div className="flex flex-wrap justify-between">
         <PersonProfile image={sarah} name="Sarah Binney" title="Chief Paperclip Duplicator"/>
         <PersonProfile image={michael} name="Michael Kearns" title="Director of Paperclip Counting"/>
