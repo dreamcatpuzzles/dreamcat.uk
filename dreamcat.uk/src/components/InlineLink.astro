@@ -1,0 +1,11 @@
+---
+import { cn } from "../cn";
+import Link from "./Link.astro";
+import { inlineLinkStyles } from "./InlineLinkStyles";
+
+const { href, className } = Astro.props as { href: string; className?: string };
+---
+
+<Link href={href} className={cn(inlineLinkStyles, className)}>
+    <slot />
+</Link>

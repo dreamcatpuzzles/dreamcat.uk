@@ -1,0 +1,20 @@
+---
+const { href, className } = Astro.props as { href: string; className?: string };
+---
+
+{
+    href.startsWith("http") ? (
+        <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class={className}
+        >
+            <slot />
+        </a>
+    ) : (
+        <a href={href} class={className}>
+            <slot />
+        </a>
+    )
+}

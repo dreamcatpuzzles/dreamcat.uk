@@ -1,0 +1,36 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+import { cn } from "../cn";
+import { inlineLinkStyles } from "./InlineLinkStyles";
+
+const { href, image, imageAlt, name, description } = Astro.props as {
+    href: string;
+    image: string | ImageMetadata;
+    imageAlt: string;
+    name: string;
+    description: string;
+};
+---
+
+<div class="max-w-[300px]">
+    <a href={href} class="group">
+        {
+            typeof image === "string" ? (
+                <img
+                    src={image}
+                    alt={imageAlt}
+                    class="h-[300px] object-cover group-hover:brightness-125"
+                />
+            ) : (
+                <Image
+                    src={image}
+                    alt={imageAlt}
+                    class="h-[300px] object-cover group-hover:brightness-125"
+                />
+            )
+        }
+        <h3 class={cn(inlineLinkStyles)}>{name}</h3>
+    </a>
+    <p>{description}</p>
+</div>
