@@ -33,10 +33,10 @@ function PersonProfile({ image, name, title }: { image?: string | StaticImageDat
 
 export default function Home() {
   return <><div className="container text-center flex flex-col items-center">
-    <Image src={logo} alt="Sleeping cat logo" unoptimized height={200} className="mt-4" />
+    <Image src={logo} alt="Sleeping cat logo" unoptimized loading="eager" height={200} className="mt-4" />
     <h1 className="text-4xl py-4 font-bold">Hi! We're Dreamcat.</h1>
   </div>
-    <Row inverted>
+    <Row inverted className="mb-0">
       <div className="flex flex-row justify-between items-center">
         <div className="flex flex-col items-center w-full">
           <p className="font-bold pb-4">
