@@ -1,12 +1,17 @@
 ---
-// import { cn } from "@//cn";
+import { cn } from "../cn";
 
-const { inverted = false, className }: { inverted?: boolean, className?: string } = Astro.props;
-const colours = inverted ? "border-salmon bg-pale text-midnight" : "border-grape bg-midnight text-pale";
+const {
+    inverted = false,
+    className,
+}: { inverted?: boolean; className?: string } = Astro.props;
+const colours = inverted
+    ? "border-salmon bg-pale text-midnight"
+    : "border-grape bg-midnight text-pale";
 ---
-<!-- <div class={cn("mb-8 py-8 border-b-12", colours, className)}> -->
- <div class="mb-8 py-8 border-b-12">
+
+<div class={cn("py-8 border-b-12", colours, className)}>
     <div class="container">
-        <slot/>
+        <slot />
     </div>
 </div>

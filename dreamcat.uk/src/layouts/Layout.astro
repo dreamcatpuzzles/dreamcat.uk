@@ -1,5 +1,7 @@
 ---
+import { Font } from "astro:assets";
 import "../styles/global.css";
+import Footer from "../components/Footer.astro";
 ---
 <!doctype html>
 <html lang="en">
@@ -8,11 +10,13 @@ import "../styles/global.css";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
+		<Font cssVariable="--font-nunito" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Dreamcat</title>
 	</head>
 	<body>
 		<slot />
+		<Footer />
 	</body>
 </html>
 
