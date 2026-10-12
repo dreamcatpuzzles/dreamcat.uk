@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import Navbar from "../components/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+import { logo } from "../images";
+import Row from "../components/Row.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import InlineLink from "../components/InlineLink.astro";
+---
+
+<Layout>
+    <Navbar />
+    <div class="flex flex-col items-center py-8">
+        <Image src={logo} alt="Logo of sleeping cat" height={200} />
+        <h1 class="font-bold text-5xl pb-4">Event hire</h1>
+    </div>
+    <Row inverted>
+        <p class="font-bold text-xl text-center">
+            Hire us to make your event a little bit more... mysterious.
+        </p>
+        <p class="text-center">
+            Weddings, teambuilding, festivals and private parties.
+        </p>
+    </Row>
+    <Row>
+        <p>
+            The Dreamcat team were amazing to work with, they listened to what
+            we were looking for and worked hard to provide a great, fun team
+            building puzzlehunt! Everyone had a fantastic time and thoroughly
+            enjoyed themselves. <span class="font-bold"
+                >Would highly recommend.</span>
+        </p>
+        <p>--Yee, Risilience (Cambridge)</p>
+    </Row>
+
+    <Row inverted>
+        <SectionTitle id="contact">Get in touch</SectionTitle>
+        <p>
+            Contact us at <InlineLink href="mailto:hi@dreamcat.uk"
+                >hi@dreamcat.uk</InlineLink
+            >to learn more or get a quote.
+        </p>
+    </Row>
+</Layout>
