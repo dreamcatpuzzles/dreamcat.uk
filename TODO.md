@@ -5,3 +5,4 @@
 * Videos!!!
 * Photos and job titles for everyone
 * Plenty more SEO/GEO tags
+* Not found page
