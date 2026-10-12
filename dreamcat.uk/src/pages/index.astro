@@ -25,14 +25,6 @@ import {
 	catalin,
 	benb,
 	harry1,
-	terpeca_2025,
-	reaction,
-	crime_scene,
-	defrag,
-	paint_toolbar,
-	phones,
-	event_cafe,
-	phonebooth,
 } from "../images";
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
@@ -59,16 +51,22 @@ import Navbar from "../components/Navbar.astro";
 				<p>Intrigued? Then we're going to get along very nicely.</p>
 			</div>
 			<div>
-				<Link href="https://www.instagram.com/dreamcat.puzzles/"
-					><Image src={instagram} height={45} alt="Instagram" /></Link
+				<Link
+					href="https://www.instagram.com/dreamcat.puzzles/"
+					className="hover:opacity-70"
 				>
+					<Image src={instagram} height={45} alt="Instagram" />
+				</Link>
 				<br />
-				<Link href="https://mastodon.me.uk/@dreamcat"
+				<Link
+					href="https://mastodon.me.uk/@dreamcat"
+					className="hover:opacity-70"
 					><Image src={mastodon} height={45} alt="Mastodon" /></Link
 				>
 				<br />
 				<Link
 					href="https://bsky.app/profile/dreamcatpuzzles.bsky.social"
+					className="hover:opacity-70"
 					><Image src={bluesky} height={45} alt="Bluesky" /></Link
 				>
 			</div>
