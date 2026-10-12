@@ -1,0 +1,94 @@
+---
+import { Image } from "astro:assets";
+import Navbar from "../components/Navbar.astro";
+import { lucid_labs, reaction, terpeca_2025 } from "../images";
+import Row from "../components/Row.astro";
+import Link from "../components/Link.astro";
+import InlineLink from "../components/InlineLink.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import YoutubeEmbed from "../components/YoutubeEmbed.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <Navbar />
+    <div class="bg-black flex flex-col items-center pb-8">
+        <Image
+            src={lucid_labs}
+            alt="Lucid Labs logo, concentric circles"
+            height={300}
+        />
+        <h1 class="font-bold text-5xl pb-4">Lucid Labs</h1>
+        <p class="font-bold text-3xl">A Dreamcat experience</p>
+    </div>
+    <Row inverted>
+        <p class="font-bold font-xl text-center">
+            Here at Lucid Labs, we believe in the power of dreams. With our
+            very* safe and mostly** tested procedure, you are almost guaranteed
+            to enter into a state of lucid dreaming and explore your own
+            subconscious.
+        </p>
+        <p class="font-bold font-xl text-center pb-4">What could go wrong?</p>
+        <div class="flex justify-center">
+            <Link href="https://terpeca.com/2025/"
+                ><Image
+                    src={terpeca_2025}
+                    alt="Top Escape Rooms Project Enthusiasts' Choice Awards (TERPECA) 2025 Nominee badge"
+                    height={300}
+                /></Link
+            >
+            <Link
+                href="https://roomescapeartist.com/2026/01/24/congratulations-2026-reaction-award-winners/"
+                ><Image
+                    src={reaction}
+                    alt="REAction Award for Inspiration to Action from Room Escape Artist"
+                    height={300}
+                /></Link
+            >
+        </div>
+        <p>*T&Cs may vary.</p>
+        <p>**In domestic animals.</p>
+    </Row>
+    <Row>
+        <YoutubeEmbed
+            url="https://www.youtube.com/embed/kzqZlY88Do0?si=T5lCfpEIg8EWVHha"
+        />
+        <div class="pb-4"></div>
+        <p>
+            A pop-up immersive puzzle experience run during Summer 2025 in
+            Kentish Town, North London.
+        </p>
+    </Row>
+    <div class="mb-8 bg-[url(/lucid-labs-wall.jpg)] bg-cover bg-center">
+        <div class="bg-black/80 py-8">
+            <div class="container">
+                <p>
+                    Lucid Labs is the Dreamcat team's first proper escape room!
+                    Explore, solve puzzles, and discover the unexpected...
+                </p>
+                <ul class="list-disc list-inside">
+                    <li>Difficulty: 3/5</li>
+                    <li>Duration: 2-3 hours</li>
+                    <li>Team size: 3-4</li>
+                    <li>Age: 3+</li>
+                </ul>
+                <p>
+                    <InlineLink
+                        href="https://morty.app/attraction/62738/lucid-labs"
+                        >We're on Morty!</InlineLink
+                    >
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <Row>
+        <SectionTitle>Stay in the loop</SectionTitle>
+        <p>
+            If you missed your chance to play Lucid Labs, sign up to our <InlineLink
+                href="https://buttondown.email/DreamcatPuzzles"
+                >newsletter</InlineLink
+            > to be the first to hear about the next Dreamcat experience!
+        </p>
+    </Row>
+</Layout>
