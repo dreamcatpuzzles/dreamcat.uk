@@ -1,6 +1,6 @@
 ## dreamcat.uk
 
-A lil NextJS app
+A lil Astro app
 
 In production this is hosted statically, so don't put anything clever in here
 
