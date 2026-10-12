@@ -6,7 +6,7 @@ const { id, className } = Astro.props as { id?: string; className?: string };
 
 <h2
     id={id}
-    class={cn("font-bold text-2xl border-b-2 w-full pb-2 mb-4", className)}
+    class={cn("font-bold text-2xl border-b-2 w-full pb-2 my-4", className)}
 >
     <slot />
 </h2>
