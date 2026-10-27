@@ -2,6 +2,7 @@ import logo from "./logo.png";
 import instagram from "./instagram.png";
 import mastodon from "./mastodon.png";
 import bluesky from "./Bluesky_Logo.svg";
+import crikkitt_coffee from "./crikkitt-coffee.png";
 import lucid_labs from "./lucid-labs.png";
 import clippy_book from "./clippy-book.png";
 import octonet from "./octonet.jpg";
@@ -25,4 +26,4 @@ import phones from "./phones.jpg";
 import event_cafe from "./event_cafe.jpg";
 import phonebooth from "./phonebooth.jpeg";
 
-export { logo, instagram, mastodon, bluesky, lucid_labs, clippy_book, octonet, dreamcatcher, key_of_dreams, locksmiths_dream, ttktm, event_crowd, dinos, sarah, michael, catalin, benb, harry1, terpeca_2025, reaction, crime_scene, defrag, paint_toolbar, phones, event_cafe, phonebooth }
+export { logo, instagram, mastodon, bluesky, crikkitt_coffee, lucid_labs, clippy_book, octonet, dreamcatcher, key_of_dreams, locksmiths_dream, ttktm, event_crowd, dinos, sarah, michael, catalin, benb, harry1, terpeca_2025, reaction, crime_scene, defrag, paint_toolbar, phones, event_cafe, phonebooth }

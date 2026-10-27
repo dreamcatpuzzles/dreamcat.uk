@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import Navbar from "@/src/components/Navbar.astro";
+import { crikkitt_coffee } from "@/src/images";
+import Row from "@/src/components/Row.astro";
+import Link from "@/src/components/Link.astro";
+import InlineLink from "@/src/components/InlineLink.astro";
+import SectionTitle from "@/src/components/SectionTitle.astro";
+import Layout from "@/src/layouts/Layout.astro";
+---
+
+<Layout>
+    <Navbar />
+    <div class="bg-black flex flex-col items-center pb-8 px-2 text-center">
+        <Image
+            src={crikkitt_coffee}
+            alt="Text 'Crikkitt Coffee'. Logo for a coffeeshop with beans and a cup"
+            height={300}
+            class="pt-8"
+        />
+        <h1 class="font-bold text-5xl py-4">???</h1>
+    </div>
+    <Row inverted>
+        <p class="text-center">
+            <Link href="https://www.youtube.com/watch?v=D4Xm4sC1ZAg" className="underline font-bold text-berry hover:text-grape">
+                "The most fun I've had in, like, four, five months"
+            </Link>
+        </p>
+        <p class="text-right">--- Quinns, Quinns Quest / People Make Games</p>
+    </Row>
+
+    <Row>
+        <p class="text-2xl">A new, weird, immersive social live action video game thing.</p>
+        <p class="text-md">Opening 2026 in at 202 Blackfriars Road, London SE1 8NJ.</p>
+
+    </Row>
+    <Row>
+        <SectionTitle>Stay in the loop</SectionTitle>
+        <p>
+            Want to play? Sign up for our <InlineLink
+                href="https://buttondown.email/DreamcatPuzzles"
+                >newsletter</InlineLink
+            > to hear when tickets are on sale!
+        </p>
+    </Row>
+</Layout>
