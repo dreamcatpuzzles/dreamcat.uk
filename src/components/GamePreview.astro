@@ -30,7 +30,7 @@ const { href, image, imageAlt, name, description } = Astro.props as {
                 />
             )
         }
-        <h3 class={cn(inlineLinkStyles)}>{name}</h3>
+        <h3 class={cn(inlineLinkStyles, "my-2 text-center text-xl")}>{name}</h3>
     </a>
-    <p>{description}</p>
+    <p class="text-md pb-4">{description}</p>
 </div>

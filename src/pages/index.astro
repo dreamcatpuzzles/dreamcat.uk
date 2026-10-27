@@ -25,6 +25,7 @@ import {
 	catalin,
 	benb,
 	harry1,
+    crikkitt_coffee,
 } from "@/src/images";
 import Layout from "@/src/layouts/Layout.astro";
 import Navbar from "@/src/components/Navbar.astro";
@@ -78,6 +79,12 @@ import Navbar from "@/src/components/Navbar.astro";
 	<Row>
 		<SectionTitle id="portfolio">Our games</SectionTitle>
 		<div class="flex flex-wrap justify-between">
+			<GamePreview
+			href="/coffee"
+			image={crikkitt_coffee}
+			imageAlt="Text 'Crikkitt Coffee'. Logo for a coffeeshop with beans and a cup"
+			name="???"
+			description=""/>
 			<GamePreview
 				href="/lucid-labs"
 				image={lucid_labs}
