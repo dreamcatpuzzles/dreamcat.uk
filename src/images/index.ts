@@ -16,6 +16,7 @@ import sarah from "./sarah.jpg";
 import michael from "./michael.jpg";
 import catalin from "./catalin.jpg";
 import benb from "./ben.jpg";
+import benfer from "./benfer.jpg";
 import harry1 from "./harry.jpg";
 import harry2 from "./harryb.jpg";
 import terpeca_2025 from "./2025TERPECABadgeNominee.svg";
@@ -27,4 +28,4 @@ import phones from "./phones.jpg";
 import event_cafe from "./event_cafe.jpg";
 import phonebooth from "./phonebooth.jpeg";
 
-export { logo, instagram, mastodon, bluesky, crikkitt_coffee, lucid_labs, clippy_book, octonet, dreamcatcher, key_of_dreams, locksmiths_dream, ttktm, event_crowd, dinos, sarah, michael, catalin, benb, harry1, harry2, terpeca_2025, reaction, crime_scene, defrag, paint_toolbar, phones, event_cafe, phonebooth }
+export { logo, instagram, mastodon, bluesky, crikkitt_coffee, lucid_labs, clippy_book, octonet, dreamcatcher, key_of_dreams, locksmiths_dream, ttktm, event_crowd, dinos, sarah, michael, catalin, benb, benfer, harry1, harry2, terpeca_2025, reaction, crime_scene, defrag, paint_toolbar, phones, event_cafe, phonebooth }
