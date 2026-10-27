@@ -16,12 +16,6 @@
   --foreground: var(--color-pale);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: var(--color-pale);
-    --foreground: var(--color-midnight);
-  }
-}
 
 body {
   background: var(--background);
