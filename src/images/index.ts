@@ -29,5 +29,7 @@ import paint_toolbar from "./paint-toolbar.jpg";
 import phones from "./phones.jpg";
 import event_cafe from "./event_cafe.jpg";
 import phonebooth from "./phonebooth.jpeg";
+import tear_top from "./tear_top.png";
+import tear_bottom from "./tear_bottom.png";
 
-export { logo, instagram, mastodon, bluesky, crikkitt_coffee, lucid_labs, clippy_book, octonet, dreamcatcher, key_of_dreams, locksmiths_dream, ttktm, event_crowd, dinos, sarah, michael, catalin, benb, benfer, harry1, harry2, shiv, lewis, terpeca_2025, reaction, crime_scene, defrag, paint_toolbar, phones, event_cafe, phonebooth }
+export { logo, instagram, mastodon, bluesky, crikkitt_coffee, lucid_labs, clippy_book, octonet, dreamcatcher, key_of_dreams, locksmiths_dream, ttktm, event_crowd, dinos, sarah, michael, catalin, benb, benfer, harry1, harry2, shiv, lewis, terpeca_2025, reaction, crime_scene, defrag, paint_toolbar, phones, event_cafe, phonebooth, tear_top, tear_bottom };
