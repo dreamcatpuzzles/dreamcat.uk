@@ -42,4 +42,7 @@ export default defineConfig({
         }
     ],
     integrations: [react()],
+    redirects: {
+        "/coffee": "/caffeine-rush"
+    }
 });
