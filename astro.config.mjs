@@ -15,7 +15,30 @@ export default defineConfig({
             name: 'Nunito',
             cssVariable: '--font-nunito',
             weights: ["400 700"]
-            
+        },
+        {
+            provider: fontProviders.local(),
+            name: 'MatchaWorld',
+            cssVariable: '--font-matcha-world',
+            options: {
+                variants: [{
+                    src: ['src/fonts/Matcha-World.woff'],
+                    weight: 'normal',
+                    style: 'normal'
+                }]
+            }
+        },
+        {
+            provider: fontProviders.local(),
+            name: 'Nougat',
+            cssVariable: '--font-nougat',
+            options: {
+                variants: [{
+                    src: ['src/fonts/Nougat-ExtraBlack.woff'],
+                    weight: 'normal',
+                    style: 'normal'
+                }]
+            }
         }
     ],
     integrations: [react()],

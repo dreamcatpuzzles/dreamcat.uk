@@ -3,5 +3,13 @@
 @theme {
   --color-beige: #f5e2b8;
   --color-mikey: #467e8e;
-  --color-salmon: #d16965;
+  --color-brick: #d16965;
+}
+
+.font-matcha-world {
+  font-family: var(--font-matcha-world);
+}
+
+.font-nougat {
+  font-family: var(--font-nougat);
 }
