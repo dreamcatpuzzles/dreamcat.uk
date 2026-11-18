@@ -51,7 +51,7 @@ export default function Navbar({ children }: { children: ReactNode }) {
             >
                 <button
                     type="button"
-                    className="absolute right-8 top-0 p-1 cursor-pointer hover:opacity-75 sm:hidden"
+                    className="absolute right-8 -top-1 p-1 cursor-pointer hover:opacity-75 sm:hidden"
                     aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
                     aria-expanded={menuOpen}
                     aria-controls="primary-navigation"
