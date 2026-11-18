@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import Navbar from "@/src/components/Navbar.astro";
 import { caffeine_rush_banner } from "@/src/images";
+import { People, Energy } from "@/src/images/icons";
 import Row from "@/src/components/Row.astro";
 import Link from "@/src/components/Link.astro";
 import InlineLink from "@/src/components/InlineLink.astro";
@@ -11,6 +12,7 @@ import Buzzshot from "@/src/buzzshot.astro";
 import CaffeineTitle from "@/src/components/CaffeineTitle.astro";
 import Expander from "../components/Expander.astro";
 import HelpEmail from "../components/HelpEmail.astro";
+import Stopwatch from "@/src/images/icons/stopwatch.astro";
 ---
 
 <Layout>
@@ -44,15 +46,24 @@ import HelpEmail from "../components/HelpEmail.astro";
         <p class="text-md">...where the kitchen is heating up. Your job: serve all the customers before the time runs out. But you&apos;d better stay on your toes - who knows what curveballs you&apos;ll have to deal with next?</p>
     </Row>
     <Row className="bg-mikey border-none">
-        <div class="flex flex-wrap justify-center gap-8 text-center text-beige">
-            <div>
-                Time: 60 minutes
+        <div class="grid grid-cols-1 sm:grid-cols-3 justify-items-center gap-8 text-center text-beige">
+            <div class="grid grid-rows-[4rem_auto] justify-items-center">
+                <div class="flex h-16 items-center">
+                    <Stopwatch className="w-14 h-14"/>
+                </div>
+                <span>60 minutes</span>
             </div>
-            <div>
-                Players: 2-6
+            <div class="grid grid-rows-[4rem_auto] justify-items-center">
+                <div class="flex h-16 items-center">
+                    <People className="w-16 h-16"/>
+                </div>
+                <span>2-6 players</span>
             </div>
-            <div>
-                Type: Frantic
+            <div class="grid grid-rows-[4rem_auto] justify-items-center">
+                <div class="flex h-16 items-center">
+                    <Energy className="w-16 h-16"/>
+                </div>
+                <span>Type: Frantic</span>
             </div>
         </div>
     </Row>
@@ -64,6 +75,9 @@ import HelpEmail from "../components/HelpEmail.astro";
         <Expander title="What do you mean, 'kinda'? How can you be 'kinda' an escape room?">
             <p>It's like an escape room, in that it takes place in a room, with furniture, with a small team of your friends for 60 minutes.</p>
             <p>But instead of trying to solve all the puzzles as fast as you can, here your quest is to make as much coffee as you can to serve to customers. There might be some escape room style puzzles along the way though.</p>
+        </Expander>
+        <Expander title="I still don't get it. Explain it another way.">
+            <p>It's like a video game, but in real life. There are some puzzles. Mostly you yell at your friends for not brewing the coffee fast enough. You might like it. You'll have to try it and find out.</p>
         </Expander>
         <Expander title="How many players can I bring?">
             <p>We think the game plays best with 4-6 people so we recommend those team sizes. You can play with 2-3 but it's a lot harder!</p>
