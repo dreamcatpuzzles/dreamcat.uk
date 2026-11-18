@@ -2,38 +2,41 @@
 import Link from "./Link.astro";
 import NavbarLi from "./NavbarLi.astro";
 import Navbar from "./Navbar";
+import { logo } from "../images";
+import { Image } from "astro:assets";
 
+const { showLogo = true }: { showLogo?: boolean } = Astro.props;
 ---
 
 <Navbar client:load>
+    <div class="max-w-[950px] m-auto px-8 flex flex-col items-center gap-2 sm:flex-row sm:justify-between">
+    {showLogo && (
+        <Link href="/" className="font-bold hover:underline flex flex-row">
+            <Image
+                src={logo}
+                alt="Dreamcat logo"
+                class="w-5 h-auto"
+            /> Dreamcat
+        </Link>
+    )}
     <ul class="text-center">
         <NavbarLi>
-            <Link className="hover:underline" href="/#portfolio">
-                Our work
-            </Link>
+            <Link className="hover:underline" href="/#portfolio">Our work</Link>
         </NavbarLi>
         <NavbarLi>
-            <Link className="hover:underline" href="/events"> Events </Link>
+            <Link className="hover:underline" href="/events">Events</Link>
         </NavbarLi>
         <NavbarLi>
-            <Link className="hover:underline" href="/#commissions">
-                Commissions
-            </Link>
+            <Link className="hover:underline" href="/#commissions">Commissions</Link>
         </NavbarLi>
         <NavbarLi>
-            <Link className="hover:underline" href="/#team">
-                Meet the team
-            </Link>
+            <Link className="hover:underline" href="/#team">Meet the team</Link>
         </NavbarLi>
         <NavbarLi>
-            <Link className="hover:underline" href="https://blog.dreamcat.uk">
-                Blog
-            </Link>
+            <Link className="hover:underline" href="https://blog.dreamcat.uk">Blog</Link>
         </NavbarLi>
         <NavbarLi>
-            <Link className="hover:underline" href="/#contact">
-                Contact us
-            </Link>
+            <Link className="hover:underline" href="/#contact">Contact us</Link>
         </NavbarLi>
-    </ul>
+    </ul></div>
 </Navbar>
