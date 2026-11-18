@@ -13,6 +13,7 @@ import CaffeineTitle from "@/src/components/CaffeineTitle.astro";
 import Expander from "../components/Expander.astro";
 import HelpEmail from "../components/HelpEmail.astro";
 import Stopwatch from "@/src/images/icons/stopwatch.astro";
+import DctMap from "../components/DCTMap.astro";
 ---
 
 <Layout>
@@ -67,6 +68,12 @@ import Stopwatch from "@/src/images/icons/stopwatch.astro";
             </div>
         </div>
     </Row>
+    <Row className="bg-brick-100 border-none text-beige-50">
+        <CaffeineTitle>Location: London Southbank</CaffeineTitle>
+        <p>202 Blackfriars Road, SE1 8NJ</p>
+        <p>Closest tubes: Southwark, Waterloo, Blackfriars</p>
+    </Row>
+    <DctMap/>
     <Row className="bg-beige-50 border-none text-brick-100">
         <CaffeineTitle>FAQs</CaffeineTitle>
         <Expander title="Is this an escape room?">
@@ -103,12 +110,19 @@ import Stopwatch from "@/src/images/icons/stopwatch.astro";
             <p>The game takes place fully indoors and we have heating and air con.</p>
             <p>You might want to wear sensible shoes. The game is more fast-paced than most escape rooms so you might find yourself wanting to dash around quickly.</p>
         </Expander>
+        <Expander title="Can I add/remove people from my booking?">
+            <p>You can add people up to 6 when you arrive, just show up and we'll sort it out on the door.</p>
+            <p>Unfortunately we don't allow refunds if someone on your team drops out.</p>
+        </Expander>
+        <Expander title="What's the deal on cancellations/refunds?">
+            <p>If you want to cancel or change your booking, let us know on <HelpEmail/>. We'll see what we can do but can't promise anything.</p>
+        </Expander>
         <Expander title="Any content warnings I should know about? [Mild spoilers]">
             <p>We have the option to include themes of alcohol in the game. When you book you'll be asked whether you'd prefer with or without alcohol. No actual alcohol is involved.</p>
             <p>If you'd like to know any other specific content advisory about the game, do get in touch: <HelpEmail/>.</p>
         </Expander>
         <Expander title="Did you use AI to make this?">
-            <p>We used AI coding assistants on the game and on this site. We use no AI in our art, writing, game design or music.</p>
+            <p>We used AI coding assistants to help build the software in the game and on this site. We use no AI in our art, writing, game design or music.</p>
         </Expander>
 
     </Row>
@@ -116,7 +130,7 @@ import Stopwatch from "@/src/images/icons/stopwatch.astro";
     <Row>
         <SectionTitle>Stay in the loop</SectionTitle>
         <p>
-            Want to hear more about our next experience? Sign up for our <InlineLink
+            Want exclusive discounts and updates on Tony's latest hijinks? Sign up for our <InlineLink
                 href="https://buttondown.email/DreamcatPuzzles"
                 >newsletter</InlineLink
             >!
