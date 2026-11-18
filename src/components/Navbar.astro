@@ -9,7 +9,7 @@ const { showLogo = true }: { showLogo?: boolean } = Astro.props;
 ---
 
 <Navbar client:load>
-    <div class="max-w-[950px] m-auto px-8 flex flex-col items-center gap-2 sm:flex-row sm:justify-between">
+    <div class="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between">
     {showLogo && (
         <Link href="/" className="font-bold hover:underline flex flex-row">
             <Image
@@ -19,7 +19,7 @@ const { showLogo = true }: { showLogo?: boolean } = Astro.props;
             /> Dreamcat
         </Link>
     )}
-    <ul class="text-center">
+    <ul id="primary-navigation" class="hidden flex-col gap-2 group-data-[menu-open=true]:flex sm:flex sm:flex-row sm:gap-0">
         <NavbarLi>
             <Link className="hover:underline" href="/#portfolio">Our work</Link>
         </NavbarLi>
