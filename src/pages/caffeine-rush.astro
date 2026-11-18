@@ -8,6 +8,9 @@ import InlineLink from "@/src/components/InlineLink.astro";
 import SectionTitle from "@/src/components/SectionTitle.astro";
 import Layout from "@/src/layouts/Layout.astro";
 import Buzzshot from "@/src/buzzshot.astro";
+import CaffeineTitle from "@/src/components/CaffeineTitle.astro";
+import Expander from "../components/Expander.astro";
+import HelpEmail from "../components/HelpEmail.astro";
 ---
 
 <Layout>
@@ -29,19 +32,19 @@ import Buzzshot from "@/src/buzzshot.astro";
     </Row>
     <Row className="bg-mikey border-none">
         <p class="text-center">
-            <Link href="https://www.youtube.com/watch?v=D4Xm4sC1ZAg" className="underline font-bold text-beige">
+            <Link href="https://youtu.be/D4Xm4sC1ZAg?t=2410" className="underline font-bold text-beige">
                 "The most fun I've had in, like, four, five months"
             </Link>
         </p>
         <p class="text-right text-beige">--- Quinns, Quinns Quest / People Make Games</p>
     </Row>
 
-    <Row className="bg-black border-none text-brick">
-        <p class="text-2xl font-nougat">Baristas Wanted at Tony's Cafe</p>
-        <p class="text-md text-mikey">...where the kitchen is heating up. Your job as baristas: serve all the customers before the time runs out. But you'd better stay on your toes - who knows what curveballs you'll have to deal with next?</p>
+    <Row className="bg-beige-50 border-none text-brick-100">
+        <CaffeineTitle>Baristas Wanted at Tony's Cafe</CaffeineTitle>
+        <p class="text-md">...where the kitchen is heating up. Your job: serve all the customers before the time runs out. But you&apos;d better stay on your toes - who knows what curveballs you&apos;ll have to deal with next?</p>
     </Row>
-    <Row className="bg-beige border-none">
-        <div class="flex flex-wrap justify-center gap-8 text-center text-mikey">
+    <Row className="bg-mikey border-none">
+        <div class="flex flex-wrap justify-center gap-8 text-center text-beige">
             <div>
                 Time: 60 minutes
             </div>
@@ -52,6 +55,48 @@ import Buzzshot from "@/src/buzzshot.astro";
                 Type: Frantic
             </div>
         </div>
+    </Row>
+    <Row className="bg-beige-50 border-none text-brick-100">
+        <CaffeineTitle>FAQs</CaffeineTitle>
+        <Expander title="Is this an escape room?">
+            <p>Kinda.</p>
+        </Expander>
+        <Expander title="What do you mean, 'kinda'? How can you be 'kinda' an escape room?">
+            <p>It's like an escape room, in that it takes place in a room, with furniture, with a small team of your friends for 60 minutes.</p>
+            <p>But instead of trying to solve all the puzzles as fast as you can, here your quest is to make as much coffee as you can to serve to customers. There might be some escape room style puzzles along the way though.</p>
+        </Expander>
+        <Expander title="How many players can I bring?">
+            <p>We think the game plays best with 4-6 people so we recommend those team sizes. You can play with 2-3 but it's a lot harder!</p>
+        </Expander>
+        <Expander title="What's the age limit?">
+            <p>Caffeine Rush is suitable for everyone. Children under 12 must be accompanied by an adult throughout. Children under 6 might find the game quite difficult but you are absolutely welcome to play as a mixed family group.</p>
+        </Expander>
+        <Expander title="Will it just be us in the room?">
+            <p>We do exclusive bookings, like most escape rooms, so you'll have the game to yourselves.</p>
+            <p>Oh, and Tony. Tony runs the cafe. He prefers to stay out of the kitchen and boss you around though.</p>
+        </Expander>
+        <Expander title="What level of physical activity is required?">
+            <p>The game involves moving around a room carrying empty paper cups and interacting with machinery. There's time in between levels for a rest and a water break.</p>
+            <p>If you like we can provide chairs to sit on during levels, though note that you probably want at least 1-2 team members to be standing and moving around during levels.</p>
+            <p>If you want to know more about whether the game is a good fit for you, just drop us an email at <HelpEmail/>.</p>
+        </Expander>
+        <Expander title="Is the location step free?">
+            <p>Unfortunately the building we are in is not step free. Our room is on the first floor up 21 fairly narrow steps.</p>
+            <p>Once you have made it to the room, we can adjust the game so some players are entirely seated if you like. However, due to the nature of the game, at least 1-2 members of the team will need to be standing and moving around for most of the 60 minutes.</p>
+            <p>If you want to know more about whether the game is a good fit for you, just drop us an email at <HelpEmail/>.</p>
+        </Expander>
+        <Expander title="What should I wear?">
+            <p>The game takes place fully indoors and we have heating and air con.</p>
+            <p>You might want to wear sensible shoes. The game is more fast-paced than most escape rooms so you might find yourself wanting to dash around quickly.</p>
+        </Expander>
+        <Expander title="Any content warnings I should know about? [Mild spoilers]">
+            <p>We have the option to include themes of alcohol in the game. When you book you'll be asked whether you'd prefer with or without alcohol. No actual alcohol is involved.</p>
+            <p>If you'd like to know any other specific content advisory about the game, do get in touch: <HelpEmail/>.</p>
+        </Expander>
+        <Expander title="Did you use AI to make this?">
+            <p>We used AI on some of the coding in the game and on this site. We use no AI in our art, writing, game design or music.</p>
+        </Expander>
+
     </Row>
     <Buzzshot />
     <Row>

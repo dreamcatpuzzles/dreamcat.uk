@@ -2,8 +2,12 @@
 
 @theme {
   --color-beige: #f5e2b8;
+  --color-beige-50: #FAEED3;
   --color-mikey: #467e8e;
+  --color-mikey-100: #2D4B53;
   --color-brick: #d16965;
+  --color-brick-200: #BF4040;
+  --color-brick-100: #842D2D;
 }
 
 .font-matcha-world {

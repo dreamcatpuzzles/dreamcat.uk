@@ -2,7 +2,7 @@
 import Link from "./Link.astro";
 import NavbarLi from "./NavbarLi.astro";
 import Navbar from "./Navbar";
-import { logo } from "../images";
+import { logo } from "@/src/images";
 import { Image } from "astro:assets";
 
 const { showLogo = true }: { showLogo?: boolean } = Astro.props;
@@ -15,7 +15,7 @@ const { showLogo = true }: { showLogo?: boolean } = Astro.props;
             <Image
                 src={logo}
                 alt="Dreamcat logo"
-                class="w-5 h-auto"
+                class="w-6 h-6 mr-2"
             /> Dreamcat
         </Link>
     )}

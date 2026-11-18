@@ -1,0 +1,9 @@
+---
+import { cn } from "@/src/cn";
+
+const { level = 2, className } = Astro.props as { level?: number, className?: string };
+const defaultClasses = "font-nougat";
+---
+{level === 1 && <h1 class={cn("text-4xl", defaultClasses, className)}><slot /></h1>}
+{level === 2 && <h2 class={cn("text-3xl", defaultClasses, className)}><slot /></h2>}
+{level === 3 && <h3 class={cn("text-2xl", defaultClasses, className)}><slot /></h3>}
