@@ -30,7 +30,7 @@ export default function Navbar({ children }: { children: ReactNode }) {
         role="navigation"
         className={cn(
             hidden ? "top--full" : "top-0",
-            "md:top-0 sticky z-1 bg-midnight py-4 border-b-8 border-grape",
+            "sticky z-1 bg-midnight py-4 border-b-8 border-grape",
         )}
     >{children}</div>)
 
