@@ -13,20 +13,20 @@ const { href, image, imageAlt, name, description } = Astro.props as {
 };
 ---
 
-<div class="max-w-[300px]">
+<div class="w-full max-w-[300px]">
     <a href={href} class="group">
         {
             typeof image === "string" ? (
                 <img
                     src={image}
                     alt={imageAlt}
-                    class="h-[300px] object-cover group-hover:brightness-125"
+                    class="w-full aspect-square object-cover group-hover:brightness-125"
                 />
             ) : (
                 <Image
                     src={image}
                     alt={imageAlt}
-                    class="h-[300px] object-cover group-hover:brightness-125"
+                    class="w-full aspect-square object-cover group-hover:brightness-125"
                 />
             )
         }

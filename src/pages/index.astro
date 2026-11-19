@@ -109,13 +109,16 @@ import Navbar from "@/src/components/Navbar.astro";
 
 	<Row>
 		<SectionTitle id="portfolio">Our games</SectionTitle>
-		<div class="flex flex-wrap justify-between">
-			<GamePreview
-			href="/caffeine-rush"
-			image={caffeine_rush_circle}
-			imageAlt="The words Caffeine Rush in a zany, playful font, with a coffee cup spilling coffee"
-			name="Caffeine Rush (2026-)"
-			description="Let's get brewing!"/>
+		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-8 justify-items-center">
+			<div class="col-span-full flex justify-center w-full">
+				<GamePreview
+					href="/caffeine-rush"
+					image={caffeine_rush_circle}
+					imageAlt="The words Caffeine Rush in a zany, playful font, with a coffee cup spilling coffee"
+					name="Caffeine Rush (2026-)"
+					description="Let's get brewing!"
+				/>
+			</div>
 			<GamePreview
 				href="/lucid-labs"
 				image={lucid_labs}
@@ -147,7 +150,7 @@ import Navbar from "@/src/components/Navbar.astro";
 		</div>
 
 		<SectionTitle id="commissions">Our collaborations</SectionTitle>
-		<div class="flex flex-wrap justify-between">
+		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-8 justify-items-center">
 			<GamePreview
 				href="https://www.thekeyofdreams.co.uk"
 				image={key_of_dreams}
