@@ -27,8 +27,10 @@ import DctMap from "../components/DCTMap.astro";
         />
     </div>
     <Row className="bg-brick border-none">
-        <p class="text-center text-beige font-nougat text-3xl">
-            Coming December 2026
+        <p class="text-center">
+            <Link href="#bz-target" className="text-beige font-nougat text-3xl underline hover:no-underline hover:opacity-70">
+                Book now &gt;
+            </Link>
         </p>
     </Row>
     <Row className="bg-mikey border-none">
@@ -128,10 +130,11 @@ import DctMap from "../components/DCTMap.astro";
         </Expander>
 
     </Row>
+    <Buzzshot />
     <Row>
         <SectionTitle>Stay in the loop</SectionTitle>
         <p>
-            Want to hear when tickets go on sale? Sign up for our <InlineLink
+            Want exclusive discounts and updates on Tony's latest hijinks? Sign up for our <InlineLink
                 href="https://buttondown.email/DreamcatPuzzles"
                 >newsletter</InlineLink
             >!
