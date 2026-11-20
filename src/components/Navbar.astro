@@ -5,12 +5,10 @@ import Navbar from "./Navbar";
 import { logo } from "@/src/images";
 import { Image } from "astro:assets";
 
-const { showLogo = true }: { showLogo?: boolean } = Astro.props;
 ---
 
 <Navbar client:load>
-    <div class="max-w-[950px] m-auto px-8 flex flex-col items-center gap-2 sm:flex-row sm:justify-between">
-    {showLogo && (
+    <div class="flex flex-col items-start gap-2 md:flex-row md:items-center md:justify-between">
         <Link href="/" className="font-bold hover:underline flex flex-row">
             <Image
                 src={logo}
@@ -18,25 +16,25 @@ const { showLogo = true }: { showLogo?: boolean } = Astro.props;
                 class="w-6 h-6 mr-2"
             /> Dreamcat
         </Link>
-    )}
-    <ul class="text-center">
-        <NavbarLi>
-            <Link className="hover:underline" href="/#portfolio">Our work</Link>
-        </NavbarLi>
-        <NavbarLi>
-            <Link className="hover:underline" href="/events">Events</Link>
-        </NavbarLi>
-        <NavbarLi>
-            <Link className="hover:underline" href="/#commissions">Commissions</Link>
-        </NavbarLi>
-        <NavbarLi>
-            <Link className="hover:underline" href="/#team">Meet the team</Link>
-        </NavbarLi>
-        <NavbarLi>
-            <Link className="hover:underline" href="https://blog.dreamcat.uk">Blog</Link>
-        </NavbarLi>
-        <NavbarLi>
-            <Link className="hover:underline" href="/#contact">Contact us</Link>
-        </NavbarLi>
-    </ul></div>
+        <ul id="primary-navigation" class="hidden flex-col gap-2 group-data-[menu-open=true]:flex md:flex md:flex-row md:gap-0">
+            <NavbarLi>
+                <Link className="hover:underline" href="/#portfolio">Our work</Link>
+            </NavbarLi>
+            <NavbarLi>
+                <Link className="hover:underline" href="/events">Events</Link>
+            </NavbarLi>
+            <NavbarLi>
+                <Link className="hover:underline" href="/#commissions">Commissions</Link>
+            </NavbarLi>
+            <NavbarLi>
+                <Link className="hover:underline" href="/#team">Meet the team</Link>
+            </NavbarLi>
+            <NavbarLi>
+                <Link className="hover:underline" href="https://blog.dreamcat.uk">Blog</Link>
+            </NavbarLi>
+            <NavbarLi>
+                <Link className="hover:underline" href="/#contact">Contact us</Link>
+            </NavbarLi>
+        </ul>
+    </div>
 </Navbar>
